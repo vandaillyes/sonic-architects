@@ -46,7 +46,7 @@ Developer @GA in LDN
 /*******************************************/
 
 body {
-  font-family: 'Montserrat', serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   font-size: 32px;
   background-color: #F4F4F6;
@@ -79,7 +79,7 @@ a {
 /* Header */
 header {
   height: 55px;
-  background-color: rgba(225, 223, 223, 0.43);
+  background-color: rgba(225, 223, 223, 0.63);
   width: 100%;
   margin: 0;
 }
@@ -110,30 +110,35 @@ header {
       margin: 12px 5px 0 0;
     }
   .menu {
-    margin: 0 5px 0 0;
+    margin: 0;
+    width: 100%;
     padding: 0;
     text-align: center;
+    background-color: rgba(225, 223, 223, 0.63);
   }
-  .visuallyhidden{
+  .visuallyhidden {
     display: none;
   }
     .menu li {
-      border: 1px #9999A1 solid;
-      background-color: #E3E3E5;
-      opacity: 0.8;
       padding: 0;
-      width: 30%;
-      margin: 0;
+      width: 95%;
+      margin: 5px 10px;
       display: block;
       float: right;
       height: 30px;
+      padding: 0;
     }
     .services,
-    .studio,
+    .equipment,
     .engineers,
-    .portfolio,
     .contact {
       clear: right;
+    }
+    .aboutus,
+    .services,
+    .equipment,
+    .engineers {
+      border-bottom: 1px #000 solid;
     }
       .menu li a {
         color: #000;
@@ -141,19 +146,15 @@ header {
         font-weight: 400;
         padding: 0;
         display: block;
-        margin: auto 0;
-      }
-      .menu li:focus {
-        background-color: #FFF;
-        transition: all 0.19s 0.2s ease-in-out;
+        text-align: right;
       }
 
 /* Photo Lane */
 .photo-lane {
-  background: url(../images/header_bg.jpg) no-repeat center #E3E3E5;
+  background: url(../images/aboutus_bg.jpg) no-repeat center #E3E3E5;
   background-size: cover;
   height: 0;
-  padding-bottom: 80%;
+  padding-bottom: 75%;
 }
 
 /* Who We Are */
@@ -292,7 +293,7 @@ footer p a:active {
 /*For screens above 450px*/
 @media screen and (min-width:450px) {
   .photo-lane {
-    padding-bottom: 75%;
+    padding-bottom: 70%;
   }
 }
 
@@ -315,53 +316,52 @@ footer p a:active {
   .menu {
     position: relative;
     display: block;
+    height: 200px;
   }
   .aboutus {
     position: absolute;
-    top: 30px;
+    top: 15px;
     left: 30px;
   }
   .services {
     clear: none;
     position: absolute;
-    top: 30px;
+    top: 15px;
     right: 30px;
   }
-  .studio {
+  .equipment {
     clear: none;
     position: absolute;
-    top: 90px;
+    top: 75px;
     left: 30px;
   }
   .engineers {
     clear: none;
     position: absolute;
-    top: 90px;
+    top: 75px;
     right: 30px;
-  }
-  .portfolio {
-    clear: none;
-    position: absolute;
-    top: 150px;
-    left: 30px;
   }
   .contact {
     clear: none;
     position: absolute;
-    top: 150px;
+    top: 135px;
     right: 30px;
+    border-bottom: 1px #000 solid;
   }
   .menu li {
     float: left;
     width: 40%;
   }
   .photo-lane {
-    padding-bottom: 50%;
+    padding-bottom: 60%;
   }
 }
 
 /*For screens above 600px*/
 @media screen and (min-width:600px) {
+  .photo-lane {
+    padding-bottom: 55%;
+  }
   .facebook {
     right: 160px;
   }
@@ -379,6 +379,16 @@ footer p a:active {
   }
   .youtube {
     left: 160px;
+  }
+}
+
+/*For screens above 650px*/
+@media screen and (min-width:650px) {
+  .menu {
+    height: 220px;
+  }
+  .photo-lane {
+    padding-bottom: 50%;
   }
 }
 
@@ -402,24 +412,22 @@ footer p a:active {
     display: block;
 }
 
-/*For screens above 800px*/
-@media screen and (min-width:800px) {
+/*For screens above 750px*/
+@media screen and (min-width:750px) {
   .photo-lane {
     padding-bottom: 40%;
   }
-  .who-we-are h2 {
-  padding-top: 20px;
-  }
-  .who-we-are hr {
-    width: 95%;
-  }
-  .who-we-are p {
-  padding-bottom: 20px;
+}
+
+/*For screens above 800px*/
+@media screen and (min-width:800px) {
+  .photo-lane {
+    padding-bottom: 35%;
   }
 }
 
-/*For screens above 900px*/
-@media screen and (min-width:900px) {
+/*For screens above 850px*/
+@media screen and (min-width:850px) {
   .logo-icon-holder {
     display: inline;
   }
@@ -430,24 +438,27 @@ footer p a:active {
     width: 1%;
   }
   .menu {
+    height: 0;
     float: right;
     position: static;
     display: inline;
-    width: 70%;
-    margin-top: -35px;
-    margin-right: -35px;
+    width: 62%;
+    margin-top: -40px;
+    margin-right: 0;
   }
     .menu li {
       float: left;
       display: inline;
-      width: 15%;
-      margin: 0 0 0 5px;
+      width: 17%;
+      margin-left: 4px;
       background: none;
       border: none;
     }
     .menu li a {
+      color: #000;
       display: block;
       font-weight: 400;
+      text-align: center;
     }
     .aboutus {
       position: static;
@@ -455,21 +466,18 @@ footer p a:active {
     .services {
       position: static;
     }
-    .studio {
+    .equipment {
       position: static;
     }
     .engineers {
       position: static;
     }
-    .portfolio {
-      position: static;
-    }
     .contact {
       position: static;
     }
-  .photo-lane {
-    padding-bottom: 35%;
-  }
+    .aboutus a {
+      border-top: 3px solid #F5BB00;
+    }
   .contact-info ul {
   margin-top: -3px;
 }
@@ -482,24 +490,31 @@ footer p a:active {
   border-right: 1px solid #000;
 }
 
-/*For screens above 1024px*/
-@media screen and (min-width:1024px) {
+/*For screens above 900px*/
+@media screen and (min-width:900px) {
   .menu {
-    width: 65%;
+    width: 60%;
   }
+    .menu li {
+      width: 17%;
+      margin-left: 5px;
+    }
   .photo-lane {
     padding-bottom: 30%;
+  }
+}
+
+/*For screens above 1024px*/
+@media screen and (min-width:1024px) {
+  .photo-lane {
+    padding-bottom: 28%;
   }
 }
 
 /*For screens above 1100px*/
 @media screen and (min-width:1100px) {
   .menu {
-    width: 60%;
-    margin-right: -50px;
-  }
-  .photo-lane {
-    padding-bottom: 28%;
+    width: 55%;
   }
   .logo-icon {
     margin-left: 7px;
@@ -524,19 +539,46 @@ footer p a:active {
     letter-spacing: 1px;
     margin-top: -7px;
   }
+  .menu {
+    width: 50%;
+  }
   .menu li {
     width: auto;
     margin: 0 0 0 40px;
   }
   .menu li a:hover {
     border-top: 3px solid #F5BB00;
-    margin-bottom: 3px;
     transition: all 0.19s 0.2s ease-in-out;
+  }
+  .photo-lane {
+    padding-bottom: 26%;
   }
   .who-we-are h2 {
   padding-top: 30px;
   }
   .who-we-are p {
   padding-bottom: 30px;
+  }
+}
+
+/*For screens above 1250px*/
+@media screen and (min-width:1250px) {
+  .menu {
+    width: 48%;
+    margin-right: 15px;
+  }
+}
+
+/*For screens above 1500px*/
+@media screen and (min-width:1500px) {
+  .menu {
+    width: 40%;
+  }
+}
+
+/*For screens above 1920px*/
+@media screen and (min-width:1920px) {
+  .menu {
+    width: 30%;
   }
 }

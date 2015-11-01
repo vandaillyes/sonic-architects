@@ -1,0 +1,597 @@
+/*
+Project Name: Sonic Architects Website
+Client: Sonic Architects
+Author: Vanda Illyes
+Developer @GA in LDN
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  font-size: 32px;
+  background-color: #F4F4F6;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  width: 100%;
+  margin: auto;
+  height: 500px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/******************************************/
+
+/**********************
+/* ABOUT US PAGE
+/**********************/
+
+/* Header */
+header {
+  height: 55px;
+  background-color: rgba(225, 223, 223, 0.63);
+  width: 100%;
+  margin: 0;
+}
+  .logo-icon-holder {
+    float: left;
+    margin: 5px 1px 0 10px;
+  }
+    .logo-icon {
+      height: 40px;
+      width: 40px;
+    }
+  .logo-text-holder {
+    float: left;
+    margin: 14px 0 0 2px;
+  }
+    .logo-text {
+      font-size: 0.8em;
+      font-weight: 700;
+      color: #000;
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 1px #403F4C;
+    }
+  .menu-icon {
+    padding-bottom: 3px;
+  }
+    .menu-icon-holder {
+      float: right;
+      margin: 12px 5px 0 0;
+    }
+  .menu {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(225, 223, 223, 0.63);
+  }
+  .visuallyhidden {
+    display: none;
+  }
+    .menu li {
+      padding: 0;
+      width: 95%;
+      margin: 5px 10px;
+      display: block;
+      float: right;
+      height: 30px;
+      padding: 0;
+    }
+    .services,
+    .equipment,
+    .engineers,
+    .contact {
+      clear: right;
+    }
+    .aboutus,
+    .services,
+    .equipment,
+    .engineers {
+      border-bottom: 1px #000 solid;
+    }
+      .menu li a {
+        color: #000;
+        font-size: 0.5em;
+        font-weight: 400;
+        padding: 0;
+        display: block;
+        text-align: right;
+      }
+
+/* Photo Lane */
+.photo-lane {
+  background: url(../images/contact_bg.jpeg) no-repeat center #E3E3E5;
+  background-size: cover;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+/* Address & Contact */
+.address,
+form {
+  margin: 10px 0;
+  padding: 5px;
+}
+.address h2 {
+  font-size: 0.4em;
+  font-weight: 400;
+  text-align: left;
+}
+.name,
+.email {
+  width: 300px;
+  height: 50px;
+  margin: 15px 0;
+  padding: 5px;
+  font-size: 0.4em;
+  border: 2px solid #E3E3E5;
+}
+.message {
+  margin: 15px 0;
+  padding: 5px;
+  font-size: 0.4em;
+  border: 2px solid #E3E3E5;
+}
+.send-message {
+  width: 140px;
+  height: 35px;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  font-size: 0.45em;
+  color: #E3E3E5;
+  border: 1px solid #000;
+  border-bottom: 2px solid #000;
+  display: block;
+  background-color: #66666E;
+  border-radius: 3px;
+}
+
+
+/* Social Media */
+.social-media {
+background-color: #F4F4F6;
+padding: 20px 0;
+}
+.social-media-container-1 {
+  float: left;
+  text-align: center;
+  position: relative;
+  width: 50%;
+  height: 50px;
+}
+  .facebook {
+    float: left;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 140px;
+  }
+  .twitter {
+    float: left;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 75px;
+  }
+  .instagram {
+    float: left;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+  }
+.social-media-container-2 {
+  float: right;
+  position: relative;
+  width: 50%;
+  height: 50px;
+}
+  .linkedin {
+    float: right;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 15px;
+  }
+  .googleplus {
+    float: right;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 75px;
+  }
+  .youtube {
+    float: right;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 140px;
+  }
+
+.social-media-icon:hover {
+  opacity: 0.6;
+  transition: all 0.4s 0.2s ease-out;
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #E3E3E5;
+}
+  .contact-logo {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 1.4px;
+    margin: 2px auto;
+    text-align: center;
+  }
+  .contact-info ul li {
+    list-style: none;
+    color: #000;
+    font-size: 0.4375em;
+    font-weight: 400;
+    margin: 2px auto;
+    text-align: center;
+  }
+
+/* Footer */
+footer {
+  background-color: #66666E;
+  color: #FFF;
+  font-size: 9px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  clear: both;
+}
+footer p a:link,
+footer p a:visited,
+footer p a:hover,
+footer p a:active {
+  text-decoration: none;
+  color: #FFF;
+}
+
+/*For screens above 450px*/
+@media screen and (min-width:450px) {
+  .photo-lane {
+    padding-bottom: 70%;
+  }
+}
+
+/*For screens above 500px*/
+@media screen and (min-width:500px) {
+  .photo-lane {
+    padding-bottom: 65%;
+  }
+}
+
+/*For screens above 550px*/
+@media screen and (min-width:550px) {
+  .logo-text {
+    padding-left: 5px;
+    letter-spacing: 1.8px;
+  }
+  .menu-icon-holder {
+    display: none;
+  }
+  .menu {
+    position: relative;
+    display: block;
+    height: 200px;
+  }
+  .aboutus {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+  }
+  .services {
+    clear: none;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+  .equipment {
+    clear: none;
+    position: absolute;
+    top: 75px;
+    left: 30px;
+  }
+  .engineers {
+    clear: none;
+    position: absolute;
+    top: 75px;
+    right: 30px;
+  }
+  .contact {
+    clear: none;
+    position: absolute;
+    top: 135px;
+    right: 30px;
+    border-bottom: 1px #000 solid;
+  }
+  .menu li {
+    float: left;
+    width: 40%;
+  }
+  .photo-lane {
+    padding-bottom: 60%;
+  }
+}
+
+/*For screens above 600px*/
+@media screen and (min-width:600px) {
+  .photo-lane {
+    padding-bottom: 55%;
+  }
+  .facebook {
+    right: 160px;
+  }
+  .twitter {
+    right: 90px;
+  }
+  .instagram {
+    right: 20px;
+  }
+  .linkedin {
+    left: 20px;
+  }
+  .googleplus {
+    left: 90px;
+  }
+  .youtube {
+    left: 160px;
+  }
+}
+
+/*For screens above 650px*/
+@media screen and (min-width:650px) {
+  .menu {
+    height: 220px;
+  }
+  .photo-lane {
+    padding-bottom: 50%;
+  }
+}
+
+/*For screens above 700px*/
+@media screen and (min-width:700px) {
+  .photo-lane {
+    padding-bottom: 45%;
+  }
+  .contact-logo {
+    float: left;
+    margin-left: 55px;
+    padding: 15px 0;
+  }
+  .contact-info ul {
+    float: right;
+    margin-top: 5px;
+    margin-right: 55px;
+    padding: 0;
+  }
+    .contact-info ul li {
+    display: block;
+}
+
+/*For screens above 750px*/
+@media screen and (min-width:750px) {
+  .photo-lane {
+    padding-bottom: 40%;
+  }
+}
+
+/*For screens above 800px*/
+@media screen and (min-width:800px) {
+  .photo-lane {
+    padding-bottom: 35%;
+  }
+}
+
+/*For screens above 850px*/
+@media screen and (min-width:850px) {
+  .logo-icon-holder {
+    display: inline;
+  }
+  .logo-text-holder {
+    display: inline;
+  }
+  .menu-icon-holder {
+    width: 1%;
+  }
+  .menu {
+    height: 0;
+    float: right;
+    position: static;
+    display: inline;
+    width: 62%;
+    margin-top: -40px;
+    margin-right: 0;
+  }
+    .menu li {
+      float: left;
+      display: inline;
+      width: 17%;
+      margin-left: 4px;
+      background: none;
+      border: none;
+    }
+    .menu li a {
+      color: #000;
+      display: block;
+      font-weight: 400;
+      text-align: center;
+    }
+    .aboutus {
+      position: static;
+    }
+    .services {
+      position: static;
+    }
+    .equipment {
+      position: static;
+    }
+    .engineers {
+      position: static;
+    }
+    .contact {
+      position: static;
+    }
+    .contact a {
+      border-top: 3px solid #F5BB00;
+    }
+  .contact-info ul {
+  margin-top: -3px;
+}
+  .contact-info ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.phone {
+  padding-right: 30px;
+  border-right: 1px solid #000;
+}
+
+/*For screens above 900px*/
+@media screen and (min-width:900px) {
+  .menu {
+    width: 60%;
+  }
+    .menu li {
+      width: 17%;
+      margin-left: 5px;
+    }
+  .photo-lane {
+    padding-bottom: 30%;
+  }
+}
+
+/*For screens above 1024px*/
+@media screen and (min-width:1024px) {
+  .photo-lane {
+    padding-bottom: 28%;
+  }
+}
+
+/*For screens above 1100px*/
+@media screen and (min-width:1100px) {
+  .menu {
+    width: 55%;
+  }
+  .logo-icon {
+    margin-left: 7px;
+  }
+  .logo-text {
+    font-size: 0.9em;
+    letter-spacing: 0.7px;
+    margin-top: -5px;
+  }
+}
+
+/*For screens above 1200px*/
+@media screen and (min-width:1200px) {
+  header {
+    position: fixed;
+  }
+  .logo-icon{
+    margin-left: 15px;
+  }
+  .logo-text {
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: -7px;
+  }
+  .menu {
+    width: 50%;
+  }
+  .menu li {
+    width: auto;
+    margin: 0 0 0 40px;
+  }
+  .menu li a:hover {
+    border-top: 3px solid #F5BB00;
+    transition: all 0.19s 0.2s ease-in-out;
+  }
+  .photo-lane {
+    padding-bottom: 26%;
+  }
+  .who-we-are h2 {
+  padding-top: 30px;
+  }
+  .who-we-are p {
+  padding-bottom: 30px;
+  }
+}
+
+/*For screens above 1250px*/
+@media screen and (min-width:1250px) {
+  .menu {
+    width: 48%;
+    margin-right: 15px;
+  }
+}
+
+/*For screens above 1500px*/
+@media screen and (min-width:1500px) {
+  .menu {
+    width: 40%;
+  }
+}
+
+/*For screens above 1920px*/
+@media screen and (min-width:1920px) {
+  .menu {
+    width: 30%;
+  }
+}
