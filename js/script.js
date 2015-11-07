@@ -1,5 +1,30 @@
+function createGoogleMap() {
+  //This is the name of the ID where the map will be generated.
+  var mapElement = document.getElementById("googleMap");
+
+  //These are the properties of our map
+  //Check out more controls at https://developers.google.com/maps/documentation/javascript/controls
+  var mapProperties = {
+    //Center of the map using a Latitude and Longitude
+    center:new google.maps.LatLng(47.5057627,19.0547137),
+    //Set the zoom of the map
+    zoom:15,
+    //Set the type of the map
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    //Disable mouse scroll-wheel scaling
+    scrollwheel: false
+  };
+  //Finally we need to create the map by creating a "new" google map, passing in the mapElement and the mapProperties we just declared.
+  var map = new google.maps.Map( mapElement, mapProperties);
+}
+
+
 //Delay code from executing until all DOM assets have been loaded
 $(document).ready(function() {
+//When the document is ready, call createGoogleMap function
+if ($("#googleMap").length) {
+  createGoogleMap();
+}
 
 // F U N C T I O N S
 
@@ -19,15 +44,9 @@ $(".instruments-list").addClass("visuallyhidden");
 $(".software-list").addClass("visuallyhidden");
 $(".other-list").addClass("visuallyhidden");
 
-//Hide the engineer Read More buttons when the page is ready
-$("#engineer-1-button").addClass("visuallyhidden");
-$("#engineer-2-button").addClass("visuallyhidden");
-$("#engineer-3-button").addClass("visuallyhidden");
+/*//Hide the engineer Read More buttons when the page is ready
+$(".engineer-button").addClass("visuallyhidden");*/
 
-//Hide the engineer descriptions when the page is ready
-$(".engineer-1-description").addClass("visuallyhidden");
-$(".engineer-2-description").addClass("visuallyhidden");
-$(".engineer-3-description").addClass("visuallyhidden");
 
 
 function revealMenu() {
@@ -102,28 +121,16 @@ function revealOther(event) {
   }
 }
 
-function revealReadMore1() {
-  $("#engineer-1-button").toggleClass("visuallyhidden");
-}
-function revealReadMore2() {
-  $("#engineer-2-button").toggleClass("visuallyhidden");
-}
-function revealReadMore3() {
-  $("#engineer-3-button").toggleClass("visuallyhidden");
+function revealReadMore() {
+  $(".engineer-button").toggleClass("visuallyhidden");
 }
 
-function revealEngineer1(event) {
+
+function revealEngineer(event) {
   event.preventDefault();
-  $(".engineer-1-description").slideToggle("slow");
+  $(this).closest('.engineer-wrapper').find('.engineer-description').slideToggle("slow");
 }
-function revealEngineer2(event) {
-  event.preventDefault();
-  $(".engineer-2-description").slideToggle("slow");
-}
-function revealEngineer3(event) {
-  event.preventDefault();
-  $(".engineer-3-description").slideToggle("slow");
-}
+
 
 // B I N D I N G S
 
@@ -150,18 +157,14 @@ $(".software-button").click(revealSoftware);
 //On clicking .other-button, reveal .other-list
 $(".other-button").click(revealOther);
 
-//On hovering over the .engineer-1-photo, display #engineer-1-button
-$(".engineer-1-photo").hover(revealReadMore1);
-//On hovering over the .engineer-2-photo, display #engineer-2-button
-$(".engineer-2-photo").hover(revealReadMore2);
-//On hovering over the .engineer-3-photo, display #engineer-3-button
-$(".engineer-3-photo").hover(revealReadMore3);
 
-//On clicking #engineer-1-button, reveal .engineer-1-description
-$("#engineer-1-button").click(revealEngineer1);
-//On clicking #engineer-2-button, reveal .engineer-2-description
-$("#engineer-2-button").click(revealEngineer2);
-//On clicking #engineer-3-button, reveal .engineer-3-description
-$("#engineer-3-button").click(revealEngineer3);
+//On hovering over the .engineer-photo, display .engineer-button
+$(".engineer-photo").hover(revealReadMore);
+
+//On clicking .engineer-button, reveal .engineer-description
+$(".engineer-button").click(revealEngineer);
+
+
+
 
 });

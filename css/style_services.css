@@ -65,8 +65,74 @@ a {
 #container {
   width: 100%;
   margin: auto;
-  height: 500px;
+  /*height: 700px;*/
 }
+
+/* Classes used by jQuery */
+.visuallyhidden {
+  display: none;
+}
+
+/* Animations */
+
+/* Tilt hamburger */
+@keyframes tilt-me {
+  50%   {
+  -ms-transform: rotateZ(30deg);
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+  }
+}
+
+@-webkit-keyframes tilt-me {
+  50%   {
+  -ms-transform: rotateZ(30deg);
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+  }
+}
+.menu-icon:hover {
+  -webkit-animation-name: tilt-me;
+  -moz-animation-name: tilt-me;
+  -ms-animation-name: tilt-me;
+  -o-animation-name: tilt-me;
+  animation-name: tilt-me;
+
+  animation-iteration-count: 1;
+  animation-duration: 700ms;
+  animation-timing-function: linear;
+}
+
+/* Move menu items */
+@keyframes move-me {
+  50%   {
+  -ms-transform: translate(-7px);
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+  }
+}
+
+@-webkit-keyframes move-me {
+  50%   {
+  -ms-transform: translate(-7px);
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+  }
+}
+
+.menu li a:hover {
+  -webkit-animation-name: move-me;
+  -moz-animation-name: move-me;
+  -ms-animation-name: move-me;
+  -o-animation-name: move-me;
+  animation-name: move-me;
+
+  animation-iteration-count: 1;
+  animation-duration: 650ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -110,19 +176,17 @@ header {
       margin: 12px 5px 0 0;
     }
   .menu {
-    margin: 0;
+    margin: -8px 0 0 0;
     width: 100%;
+    height: 155px;
     padding: 0;
     text-align: center;
     background-color: rgba(225, 223, 223, 0.63);
   }
-  .visuallyhidden {
-    display: none;
-  }
     .menu li {
       padding: 0;
       width: 95%;
-      margin: 5px 10px;
+      margin: 0px 10px;
       display: block;
       float: right;
       height: 30px;
@@ -138,7 +202,7 @@ header {
     .services,
     .equipment,
     .engineers {
-      border-bottom: 1px #000 solid;
+      border-bottom: 1px #66666E solid;
     }
       .menu li a {
         color: #000;
@@ -154,7 +218,7 @@ header {
   background: url(../images/services_bg.jpeg) no-repeat center #E3E3E5;
   background-size: cover;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 65%;
 }
 
 /* Services */
@@ -173,8 +237,8 @@ header {
   margin: 0 auto;
   padding: 0;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 .service-1-photo {
   background: url(../images/soundengineering1_small.jpg) no-repeat center;
@@ -197,20 +261,28 @@ header {
 .service-2-button,
 .service-3-button {
   text-align: center;
-  border: 1px #9999A1 solid;
-  border-bottom: 3px #9999A1 solid;
+  border: 1px solid #9999A1;
+  border-bottom: 3px solid #9999A1;
   border-radius: 2px;
   background-color: #E3E3E5;
   font-size: 0.5em;
   font-weight: 400;
   margin: 20px auto;
   padding: 5px;
-  width: 60%;
+  width: 220px;
 }
 .service-1-button a,
 .service-2-button a,
 .service-3-button a {
   color: #000;
+}
+.service-1-button:hover,
+.service-2-button:hover,
+.service-3-button:hover {
+  background-color: #F5BB00;
+  border: 1px solid #c49500;
+  border-bottom: 3px solid #c49500;
+  transition: all 0.4s 0.2s ease-out;
 }
 .service-1-description,
 .service-2-description,
@@ -327,10 +399,55 @@ footer p a:active {
   text-decoration: none;
   color: #FFF;
 }
+
+/*Responsiveness to various screen sizes*/
+/*For screens above 375px*/
+@media screen and (min-width:375px) {
+  .menu {
+    height: 195px;
+  }
+  .menu li {
+    margin-top: 3px;
+  }
+}
+
+/*For screens above 400px*/
+@media screen and (min-width:400px) {
+  .menu-icon-holder {
+    margin-right: 10px;
+  }
+  .menu {
+    height: 205px; /*NEW*/
+  }
+  .menu li {
+    margin-top: 5px;
+  }
+}
+
+/*For screens above 425px*/
+@media screen and (min-width:425px) {
+  .menu {
+    height: 222px; /*NEW*/
+  }
+}
+
 /*For screens above 450px*/
 @media screen and (min-width:450px) {
+  .menu {
+    height: 215px; /*NEW*/
+  }
   .photo-lane {
-    padding-bottom: 70%;
+    padding-bottom: 59%;
+  }
+}
+
+/*For screens above 500px*/
+@media screen and (min-width:500px) {
+  .menu {
+    height: 210px; /*NEW*/
+  }
+  .photo-lane {
+    padding-bottom: 53%;
   }
 }
 
@@ -340,62 +457,21 @@ footer p a:active {
     padding-left: 5px;
     letter-spacing: 1.8px;
   }
-  .menu-icon-holder {
-    display: none;
-  }
   .menu {
-    position: relative;
-    display: block;
-    height: 200px;
-  }
-  .aboutus {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-  }
-  .services {
-    clear: none;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-  }
-  .equipment {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    left: 30px;
-  }
-  .engineers {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    right: 30px;
-  }
-  .contact {
-    clear: none;
-    position: absolute;
-    top: 135px;
-    right: 30px;
-    border-bottom: 1px #000 solid;
-  }
-  .menu li {
-    float: left;
-    width: 40%;
+    height: 220px; /*NEW*/
   }
   .photo-lane {
-    padding-bottom: 60%;
-  }
-  .service-1-button,
-  .service-2-button,
-  .service-3-button {
-    width: 50%;
+    padding-bottom: 50%;
   }
 }
 
 /*For screens above 600px*/
 @media screen and (min-width:600px) {
+  .menu {
+    height: 227px; /*NEW*/
+  }
   .photo-lane {
-    padding-bottom: 55%;
+    padding-bottom: 47%;
   }
   .facebook {
     right: 160px;
@@ -420,14 +496,17 @@ footer p a:active {
 /*For screens above 650px*/
 @media screen and (min-width:650px) {
   .photo-lane {
-    padding-bottom: 50%;
+    padding-bottom: 43%;
   }
 }
 
 /*For screens above 700px*/
 @media screen and (min-width:700px) {
+  .menu {
+    height: 220px; /*NEW*/
+  }
   .photo-lane {
-    padding-bottom: 45%;
+    padding-bottom: 39%;
   }
   .contact-logo {
     float: left;
@@ -446,20 +525,21 @@ footer p a:active {
 
 /*For screens above 750px*/
 @media screen and (min-width:750px) {
-  .photo-lane {
-    padding-bottom: 40%;
+  .menu {
+    height: 215px; /*NEW*/
   }
-  .service-1-button,
-  .service-2-button,
-  .service-3-button {
-    width: 45%;
+  .photo-lane {
+    padding-bottom: 36%;
   }
 }
 
 /*For screens above 800px*/
 @media screen and (min-width:800px) {
+  .menu {
+    height: 210px; /*NEW*/
+  }
   .photo-lane {
-    padding-bottom: 35%;
+    padding-bottom: 33%;
   }
   .who-we-are h2 {
   padding-top: 20px;
@@ -481,6 +561,7 @@ footer p a:active {
     display: inline;
   }
   .menu-icon-holder {
+    display: none;
     width: 1%;
   }
   .menu {
@@ -495,8 +576,8 @@ footer p a:active {
     .menu li {
       float: left;
       display: inline;
-      width: 17%;
-      margin-left: 4px;
+      width: auto;
+      margin-left: 20px;
       background: none;
       border: none;
     }
@@ -505,6 +586,10 @@ footer p a:active {
       display: block;
       font-weight: 400;
       text-align: center;
+      /*transition: all 0.19s 0.2s ease-in-out; NEW moved here from 1200px*/
+    }
+    .menu li a:hover {
+      border-top: 3px solid #F5BB00;
     }
     .aboutus {
       position: static;
@@ -524,6 +609,15 @@ footer p a:active {
     .services a {
       border-top: 3px solid #F5BB00;
     }
+    .aboutus a,
+    .equipment a,
+    .engineers a,
+    .contact a {
+      border-top: 3px solid rgba(245,187,0,0);
+    }
+    .photo-lane {
+      padding-bottom: 30%;
+    }
   .service-1,
   .service-2,
   .service-3 {
@@ -533,11 +627,6 @@ footer p a:active {
   }
   .service-1 {
     margin-left: 15px;
-  }
-  .service-1-button,
-  .service-2-button,
-  .service-3-button {
-    width: 70%;
   }
   .contact-info ul {
   margin-top: -3px;
@@ -554,28 +643,50 @@ footer p a:active {
 /*For screens above 900px*/
 @media screen and (min-width:900px) {
   .menu {
-    width: 60%;
+    width: 59%;
   }
     .menu li {
       width: 17%;
       margin-left: 5px;
     }
   .photo-lane {
-    padding-bottom: 30%;
+    padding-bottom: 27%;
   }
 }
 
+/*For screens above 950px*/
+@media screen and (min-width:950px) {
+  .menu {
+    width: 56%;
+  }
+
+/*For screens above 1000px*/
+@media screen and (min-width:1000px) {
+  .menu {
+    width: 53%;
+  }
+
 /*For screens above 1024px*/
 @media screen and (min-width:1024px) {
+  .menu {
+    width: 52%;
+  }
   .photo-lane {
-    padding-bottom: 28%;
+    padding-bottom: 24%;
+  }
+}
+
+/*For screens above 1050px*/
+@media screen and (min-width:1050px) {
+  .menu {
+    width: 51%;
   }
 }
 
 /*For screens above 1100px*/
 @media screen and (min-width:1100px) {
   .menu {
-    width: 55%;
+    width: 49%;
   }
   .logo-icon {
     margin-left: 7px;
@@ -586,6 +697,12 @@ footer p a:active {
     margin-top: -5px;
   }
 }
+
+/*For screens above 1150px*/
+@media screen and (min-width:1150px) {
+  .menu {
+    width: 47%;
+  }
 
 /*For screens above 1200px*/
 @media screen and (min-width:1200px) {
@@ -607,43 +724,45 @@ footer p a:active {
     width: auto;
     margin: 0 0 0 40px;
   }
-  .menu li a:hover {
-    border-top: 3px solid #F5BB00;
-    transition: all 0.19s 0.2s ease-in-out;
-  }
   .photo-lane {
-    padding-bottom: 26%;
+    padding-bottom: 22%;
   }
   .services-box {
     margin-bottom: 28px;
-  }
-  .service-1-button:hover,
-  .service-2-button:hover,
-  .service-3-button:hover {
-    background-color: #F5BB00;
-    border: 1px solid #c49500;
-    border-bottom: 3px solid #c49500;
-    transition: all 0.4s 0.2s ease-out;
   }
 
   /*For screens above 1250px*/
   @media screen and (min-width:1250px) {
     .menu {
-      width: 48%;
+      width: 47%;
       margin-right: 15px;
     }
   }
 
-  /*For screens above 1500px*/
-  @media screen and (min-width:1500px) {
+  /*For screens above 1275px*/
+  @media screen and (min-width:1275px) {
     .menu {
-      width: 40%;
+      width: 46%;
+    }
+  }
+
+  /*For screens above 1300px*/
+  @media screen and (min-width:1300px) {
+    .menu {
+      width: 44%;
+    }
+  }
+
+  /*For screens above 1350px*/
+  @media screen and (min-width:1350px) {
+    .menu {
+      width: 43%;
     }
   }
 
   /*For screens above 1920px*/
   @media screen and (min-width:1920px) {
     .menu {
-      width: 30%;
+      width: 31%;
     }
 }

@@ -65,7 +65,71 @@ a {
 #container {
   width: 100%;
   margin: auto;
-  height: 500px;
+}
+
+/* Classes used by jQuery */ /*NEW*/
+.visuallyhidden {
+  display: none;
+}
+
+/* Animations */
+
+/* Tilt hamburger */
+@keyframes tilt-me {
+  50%   {
+  -ms-transform: rotateZ(30deg);
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+  }
+}
+
+@-webkit-keyframes tilt-me {
+  50%   {
+  -ms-transform: rotateZ(30deg);
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+  }
+}
+.menu-icon:hover {
+  -webkit-animation-name: tilt-me;
+  -moz-animation-name: tilt-me;
+  -ms-animation-name: tilt-me;
+  -o-animation-name: tilt-me;
+  animation-name: tilt-me;
+
+  animation-iteration-count: 1;
+  animation-duration: 700ms;
+  animation-timing-function: linear;
+}
+
+/* Move menu items */
+@keyframes move-me {
+  50%   {
+  -ms-transform: translate(-7px);
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+  }
+}
+
+@-webkit-keyframes move-me {
+  50%   {
+  -ms-transform: translate(-7px);
+  -webkit-transform: translate(-7px);
+  transform: translate(-7px);
+  }
+}
+
+.menu li a:hover {
+  -webkit-animation-name: move-me;
+  -moz-animation-name: move-me;
+  -ms-animation-name: move-me;
+  -o-animation-name: move-me;
+  animation-name: move-me;
+
+  animation-iteration-count: 1;
+  animation-duration: 650ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 /******************************************
@@ -110,19 +174,17 @@ header {
       margin: 12px 5px 0 0;
     }
   .menu {
-    margin: 0;
+    margin: -8px 0 0 0;
     width: 100%;
+    height: 153px;
     padding: 0;
     text-align: center;
     background-color: rgba(225, 223, 223, 0.63);
   }
-  .visuallyhidden {
-    display: none;
-  }
     .menu li {
       padding: 0;
       width: 95%;
-      margin: 5px 10px;
+      margin: 0 10px;
       display: block;
       float: right;
       height: 30px;
@@ -138,7 +200,7 @@ header {
     .services,
     .equipment,
     .engineers {
-      border-bottom: 1px #000 solid;
+      border-bottom: 1px #66666E solid;
     }
       .menu li a {
         color: #000;
@@ -154,7 +216,7 @@ header {
   background: url(../images/engineers1_bg.jpg) no-repeat center #E3E3E5;
   background-size: cover;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 65%;
 }
 
 /* Engineers */
@@ -162,15 +224,14 @@ header {
   background-color: #F4F4F6;
   margin-top: 30px;
 }
-.engineer-1,
-.engineer-2,
-.engineer-3 {
+.engineer-wrapper {
   margin: 0 5%;
   position: relative;
 }
-.engineer-1-photo,
-.engineer-2-photo,
-.engineer-3-photo {
+.engineer-photo:hover .engineer-button {
+  display: block;
+}
+.engineer-photo {
   margin: 0;
   padding: 0;
 }
@@ -183,24 +244,18 @@ header {
 .engineer-img:hover {
   opacity: 0.6;
 }
-.engineer-1-name,
-.engineer-2-name,
-.engineer-3-name {
+.engineer-name {
   background-color: #E3E3E5;
   border-left: 1px #9999A1 solid;
   border-right: 1px #9999A1 solid;
   margin-bottom: 20px;
 }
-.engineer-1-name p,
-.engineer-2-name p,
-.engineer-3-name p {
+.engineer-name p {
   font-size: 0.5em;
   text-align: center;
   font-weight: 700;
 }
-#engineer-1-button,
-#engineer-2-button,
-#engineer-3-button {
+.engineer-button {
   text-align: center;
   border: 2px #000 solid;
   border-radius: 2px;
@@ -210,31 +265,23 @@ header {
   padding: 5px;
   width: 60%;
 }
-#engineer-1-button {
+
+.engineer-button {
+  display: none;
+}
+
+.engineer-button {
   position: absolute;
   top: 190px;
   left: 75px;
 }
-#engineer-2-button {
-  position: absolute;
-  top: 190px;
-  left: 75px;
-}
-#engineer-3-button {
-  position: absolute;
-  top: 190px;
-  left: 75px;
-}
-#engineer-1-button a,
-#engineer-2-button a,
-#engineer-3-button a {
+.engineer-button a {
   color: #000;
   font-weight: 700;
 }
-.engineer-1-description,
-.engineer-2-description,
-.engineer-3-description {
+.engineer-description {
   font-size: 0.45em;
+  display: none;
   padding: 10px;
   width: 90%;
   margin: 5px auto;
@@ -347,20 +394,47 @@ footer p a:active {
   color: #FFF;
 }
 
+/*Responsiveness to various screen sizes*/
+
+/*For screens above 375px*/
+@media screen and (min-width:375px) {
+  .menu {
+    height: 190px;
+  }
+  .menu li {
+    margin-top: 3px;
+  }
+}
+
+/*For screens above 400px*/
+@media screen and (min-width:400px) {
+  .menu-icon-holder {
+    margin-right: 10px;
+  }
+  .menu {
+    height: 205px;
+  }
+  .menu li {
+    margin-top: 5px;
+  }
+}
+
+/*For screens above 425px*/
+@media screen and (min-width:425px) {
+  .menu {
+    height: 221px;
+  }
+}
+
 /*For screens above 450px*/
 @media screen and (min-width:450px) {
+  .menu {
+    height: 212px;
+  }
   .photo-lane {
-    padding-bottom: 70%;
+    padding-bottom: 59%;
   }
-  #engineer-1-button {
-    top: 220px;
-    left: 80px;
-  }
-  #engineer-2-button {
-    top: 220px;
-    left: 80px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 220px;
     left: 80px;
   }
@@ -368,15 +442,13 @@ footer p a:active {
 
 /*For screens above 500px*/
 @media screen and (min-width:500px) {
-  #engineer-1-button {
-    top: 240px;
-    left: 90px;
+  .menu {
+    height: 210px;
   }
-  #engineer-2-button {
-    top: 240px;
-    left: 90px;
+  .photo-lane {
+    padding-bottom: 53%;
   }
-  #engineer-3-button {
+  .engineer-button {
     top: 240px;
     left: 90px;
   }
@@ -388,65 +460,16 @@ footer p a:active {
     padding-left: 5px;
     letter-spacing: 1.8px;
   }
-  .menu-icon-holder {
-    display: none;
-  }
   .menu {
-    position: relative;
-    display: block;
-    height: 200px;
-  }
-  .aboutus {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-  }
-  .services {
-    clear: none;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-  }
-  .equipment {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    left: 30px;
-  }
-  .engineers {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    right: 30px;
-  }
-  .contact {
-    clear: none;
-    position: absolute;
-    top: 135px;
-    right: 30px;
-    border-bottom: 1px #000 solid;
-  }
-  .menu li {
-    float: left;
-    width: 40%;
+    height: 220px;
   }
   .photo-lane {
-    padding-bottom: 60%;
+    padding-bottom: 50%;
   }
-  #engineer-1-button,
-  #engineer-2-button,
-  #engineer-3-button {
+  .engineer-button{
     width: 50%;
   }
-  #engineer-1-button {
-    top: 270px;
-    left: 130px;
-  }
-  #engineer-2-button {
-    top: 270px;
-    left: 130px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 270px;
     left: 130px;
   }
@@ -454,29 +477,22 @@ footer p a:active {
 
 /*For screens above 600px*/
 @media screen and (min-width:600px) {
+  .menu {
+    height: 226px;
+  }
   .engineer-img {
     height: 60%;
     padding: 0 10px;
   }
-  .engineer-1-photo,
-  .engineer-2-photo,
-  .engineer-3-photo {
+  .engineer-photo {
     margin: 0 auto;
   }
-  #engineer-1-button {
-    top: 290px;
-    left: 140px;
-  }
-  #engineer-2-button {
-    top: 290px;
-    left: 140px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 290px;
     left: 140px;
   }
   .photo-lane {
-    padding-bottom: 55%;
+    padding-bottom: 47%;
   }
   .facebook {
     right: 160px;
@@ -501,17 +517,9 @@ footer p a:active {
 /*For screens above 650px*/
 @media screen and (min-width:650px) {
   .photo-lane {
-    padding-bottom: 50%;
+    padding-bottom: 43%;
   }
-  #engineer-1-button {
-    top: 320px;
-    left: 150px;
-  }
-  #engineer-2-button {
-    top: 320px;
-    left: 150px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 320px;
     left: 150px;
   }
@@ -519,21 +527,16 @@ footer p a:active {
 
 /*For screens above 700px*/
 @media screen and (min-width:700px) {
+  .menu {
+    height: 219px;
+  }
   .engineer-img {
     height: 55%;
   }
   .photo-lane {
-    padding-bottom: 45%;
+    padding-bottom: 39%;
   }
-  #engineer-1-button {
-    top: 340px;
-    left: 160px;
-  }
-  #engineer-2-button {
-    top: 340px;
-    left: 160px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 340px;
     left: 160px;
   }
@@ -554,23 +557,16 @@ footer p a:active {
 
 /*For screens above 750px*/
 @media screen and (min-width:750px) {
-  .photo-lane {
-    padding-bottom: 40%;
+  .menu {
+    height: 215px;
   }
-  #engineer-1-button,
-  #engineer-2-button,
-  #engineer-3-button {
+  .photo-lane {
+    padding-bottom: 36%;
+  }
+  .engineer-button {
     width: 45%;
   }
-  #engineer-1-button {
-    top: 370px;
-    left: 190px;
-  }
-  #engineer-2-button {
-    top: 370px;
-    left: 190px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 370px;
     left: 190px;
   }
@@ -578,21 +574,16 @@ footer p a:active {
 
 /*For screens above 800px*/
 @media screen and (min-width:800px) {
+  .menu {
+    height: 210px;
+  }
   .photo-lane {
-    padding-bottom: 35%;
+    padding-bottom: 33%;
   }
   .engineer-img {
     height: 50%;
   }
-  #engineer-1-button {
-    top: 400px;
-    left: 210px;
-  }
-  #engineer-2-button {
-    top: 400px;
-    left: 210px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 400px;
     left: 210px;
   }
@@ -616,6 +607,7 @@ footer p a:active {
     display: inline;
   }
   .menu-icon-holder {
+    display: none;
     width: 1%;
   }
   .menu {
@@ -630,8 +622,8 @@ footer p a:active {
     .menu li {
       float: left;
       display: inline;
-      width: 17%;
-      margin-left: 4px;
+      width: auto;
+      margin-left: 20px;
       background: none;
       border: none;
     }
@@ -640,6 +632,9 @@ footer p a:active {
       display: block;
       font-weight: 400;
       text-align: center;
+    }
+    .menu li a:hover {
+      border-top: 3px solid #F5BB00;
     }
     .aboutus {
       position: static;
@@ -659,36 +654,31 @@ footer p a:active {
     .engineers a {
       border-top: 3px solid #F5BB00;
     }
-  .engineer-1,
-  .engineer-2,
-  .engineer-3 {
+    .aboutus a,
+    .services a,
+    .equipment a,
+    .contact a {
+      border-top: 3px solid rgba(245,187,0,0);
+    }
+  .photo-lane {
+    padding-bottom: 30%; 
+  }
+  .engineer-wrapper {
     float: left;
-    width: 31%;
+    width: 30%;
     margin: 0 1%;
   }
-  .engineer-1 {
+  .engineer-wrapper { /*used to be engineer-1*/
     margin-left: 15px;
   }
-  #engineer-1-button,
-  #engineer-2-button,
-  #engineer-3-button {
+  .engineer-button {
     width: 70%;
   }
-  #engineer-1-button {
+  .engineer-button {
     top: 110px;
     left: 40px;
   }
-  #engineer-2-button {
-    top: 110px;
-    left: 40px;
-  }
-  #engineer-3-button {
-    top: 110px;
-    left: 40px;
-  }
-  .engineer-1-name p,
-  .engineer-2-name p,
-  .engineer-3-name p {
+  .engineer-name p {
     font-size: 0.4em;
     font-weight: 400;
   }
@@ -707,52 +697,58 @@ footer p a:active {
 /*For screens above 900px*/
 @media screen and (min-width:900px) {
   .menu {
-    width: 60%;
+    width: 59%;
   }
     .menu li {
       width: 17%;
       margin-left: 5px;
     }
   .photo-lane {
-    padding-bottom: 30%;
+    padding-bottom: 27%;
   }
-  #engineer-1-button {
-    top: 120px;
-    left: 45px;
-  }
-  #engineer-2-button {
-    top: 120px;
-    left: 45px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 120px;
     left: 45px;
   }
 }
 
+/*For screens above 950px*/
+@media screen and (min-width:950px) {
+  .menu {
+    width: 56%;
+  }
+
+/*For screens above 1000px*/
+@media screen and (min-width:1000px) {
+  .menu {
+    width: 53%;
+  }
+
 /*For screens above 1024px*/
 @media screen and (min-width:1024px) {
+  .menu {
+    width: 52%;
+  }
   .photo-lane {
-    padding-bottom: 28%;
+    padding-bottom: 24%;
   }
-  #engineer-1-button {
+  .engineer-button {
     top: 140px;
     left: 50px;
   }
-  #engineer-2-button {
-    top: 140px;
-    left: 50px;
-  }
-  #engineer-3-button {
-    top: 140px;
-    left: 50px;
+}
+
+/*For screens above 1050px*/
+@media screen and (min-width:1050px) {
+  .menu {
+    width: 51%;
   }
 }
 
 /*For screens above 1100px*/
 @media screen and (min-width:1100px) {
   .menu {
-    width: 55%;
+    width: 49%;
   }
   .logo-icon {
     margin-left: 7px;
@@ -762,19 +758,17 @@ footer p a:active {
     letter-spacing: 0.7px;
     margin-top: -5px;
   }
-  #engineer-1-button {
-    top: 160px;
-    left: 55px;
-  }
-  #engineer-2-button {
-    top: 160px;
-    left: 55px;
-  }
-  #engineer-3-button {
+  .engineer-button {
     top: 160px;
     left: 55px;
   }
 }
+
+/*For screens above 1150px*/
+@media screen and (min-width:1150px) {
+  .menu {
+    width: 47%;
+  }
 
 /*For screens above 1200px*/
 @media screen and (min-width:1200px) {
@@ -796,31 +790,17 @@ footer p a:active {
     width: auto;
     margin: 0 0 0 40px;
   }
-  .menu li a:hover {
-    border-top: 3px solid #F5BB00;
-    transition: all 0.19s 0.2s ease-in-out;
-  }
   .photo-lane {
-    padding-bottom: 26%;
+    padding-bottom: 22%;
   }
   .engineers-box {
     margin-bottom: 28px;
   }
-  #engineer-1-button {
+  .engineer-button {
     top: 180px;
     left: 60px;
   }
-  #engineer-2-button {
-    top: 180px;
-    left: 60px;
-  }
-  #engineer-3-button {
-    top: 180px;
-    left: 60px;
-  }
-  #engineer-1-button:hover,
-  #engineer-2-button:hover,
-  #engineer-3-button:hover {
+  .engineer-button:hover {
     background-color: #F5BB00;
     border: 1px solid #c49500;
     border-bottom: 3px solid #c49500;
@@ -830,56 +810,35 @@ footer p a:active {
   /*For screens above 1250px*/
   @media screen and (min-width:1250px) {
     .menu {
-      width: 48%;
+      width: 47%;
       margin-right: 15px;
     }
-    #engineer-1-button {
-      top: 190px;
-      left: 65px;
-    }
-    #engineer-2-button {
-      top: 190px;
-      left: 65px;
-    }
-    #engineer-3-button {
+    .engineer-button {
       top: 190px;
       left: 65px;
     }
   }
 
-  /*For screens above 1500px*/
-  @media screen and (min-width:1500px) {
+  /*For screens above 1300px*/
+  @media screen and (min-width:1300px) {
     .menu {
-      width: 40%;
+      width: 44%;
     }
-    .#engineer-1-button {
-      top: 210px;
-      left: 65px;
-    }
-    #engineer-2-button {
-      top: 210px;
-      left: 65px;
-    }
-    #engineer-3-button {
-      top: 210px;
-      left: 65px;
+  }
+
+  /*For screens above 1350px*/
+  @media screen and (min-width:1350px) {
+    .menu {
+      width: 43%;
     }
   }
 
   /*For screens above 1920px*/
   @media screen and (min-width:1920px) {
     .menu {
-      width: 30%;
+      width: 31%;
     }
-    #engineer-1-button {
-      top: 320px;
-      left: 95px;
-    }
-    #engineer-2-button {
-      top: 320px;
-      left: 95px;
-    }
-    #engineer-3-button {
+    .engineer-button {
       top: 320px;
       left: 95px;
     }

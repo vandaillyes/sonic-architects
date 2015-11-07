@@ -164,9 +164,15 @@ form {
   padding: 5px;
 }
 .address h2 {
-  font-size: 0.4em;
+  font-size: 0.45em;
   font-weight: 400;
+  padding: 5px;
   text-align: left;
+}
+#googleMap {
+  width: 380px;
+  height: 266px;
+  margin: 10px 5px;
 }
 .name,
 .email {
@@ -174,13 +180,21 @@ form {
   height: 50px;
   margin: 15px 0;
   padding: 5px;
-  font-size: 0.4em;
   border: 2px solid #E3E3E5;
+  font-family: inherit;
+  font-size: 0.5em;
 }
+.email:required {
+
+}
+
 .message {
-  margin: 15px 0;
+  width: 380px;
+  height: 180px;
+  margin: 15px 0 5px 0;
   padding: 5px;
-  font-size: 0.4em;
+  font-family: inherit;
+  font-size: 0.5em;
   border: 2px solid #E3E3E5;
 }
 .send-message {
@@ -188,15 +202,20 @@ form {
   height: 35px;
   margin: 0 0 15px 0;
   padding: 5px;
-  font-size: 0.45em;
-  color: #E3E3E5;
-  border: 1px solid #000;
-  border-bottom: 2px solid #000;
+  font-family: inherit;
+  font-size: 0.4em;
+  color: #000;
+  border: 1px solid #9999A1;
+  border-bottom: 3px solid #9999A1;
   display: block;
-  background-color: #66666E;
-  border-radius: 3px;
+  background-color: #E3E3E5;
+  border-radius: 2px;
 }
-
+.send-message:hover {
+  border: 1px solid #c49500;
+  border-bottom: 3px solid #c49500;
+  background-color: #F5BB00;
+}
 
 /* Social Media */
 .social-media {
@@ -308,6 +327,10 @@ footer p a:active {
   .photo-lane {
     padding-bottom: 70%;
   }
+  #googleMap {
+    width: 100%;
+    margin: 10px 0px;
+  }
 }
 
 /*For screens above 500px*/
@@ -315,6 +338,9 @@ footer p a:active {
   .photo-lane {
     padding-bottom: 65%;
   }
+  .message {
+    width: 450px;
+    height: 200px;
 }
 
 /*For screens above 550px*/
@@ -375,6 +401,10 @@ footer p a:active {
   .photo-lane {
     padding-bottom: 55%;
   }
+  .message {
+    width: 500px;
+    height: 200px;
+  }
   .facebook {
     right: 160px;
   }
@@ -392,6 +422,14 @@ footer p a:active {
   }
   .youtube {
     left: 160px;
+  }
+}
+
+/*For screens above 619px*/
+@media screen and (min-width:619px) {
+  .message {
+    width: 610px;
+    height: 200px;
   }
 }
 
@@ -488,20 +526,43 @@ footer p a:active {
     .contact {
       position: static;
     }
+    .address {
+      float: left;
+      width: 50%;
+    }
+    #googleMap {
+      height: 295px;
+    }
+    #contactus {
+      float: right;
+      width: 50%;
+      padding-top: 37px;
+      padding-left: 10px;
+    }
+      .name {
+        margin-top: 10px;
+      }
+      .message {
+        width: 420px;
+      }
+    .social-media {
+      clear: both;
+    }
     .contact a {
       border-top: 3px solid #F5BB00;
     }
-  .contact-info ul {
-  margin-top: -3px;
-}
-  .contact-info ul li {
-  display: inline-block;
-  margin-left: 30px;
-}
-.phone {
-  padding-right: 30px;
-  border-right: 1px solid #000;
-}
+    .contact-info ul {
+    margin-top: -3px;
+    }
+      .contact-info ul li {
+      display: inline-block;
+      margin-left: 30px;
+      }
+    .phone {
+      padding-right: 30px;
+      border-right: 1px solid #000;
+    }
+  }
 
 /*For screens above 900px*/
 @media screen and (min-width:900px) {
@@ -514,6 +575,9 @@ footer p a:active {
     }
   .photo-lane {
     padding-bottom: 30%;
+  }
+  .message {
+    width: 100%;
   }
 }
 
@@ -572,6 +636,15 @@ footer p a:active {
   .who-we-are p {
   padding-bottom: 30px;
   }
+}
+
+/*For screens above 1248px*/
+@media screen and (min-width:1248px) {
+  #googleMap {
+    height: 278px;
+  }
+  #contactus {
+    padding-top: 32px;
 }
 
 /*For screens above 1250px*/
