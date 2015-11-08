@@ -1,5 +1,4 @@
-
-
+// Google Maps
 function createGoogleMap() {
 
   //This is the name of the ID where the map will be generated.
@@ -34,7 +33,6 @@ if ($("#googleMap").length) {
 }
 
 
-
 // F U N C T I O N S
 
 //Hide the menu list when the page is ready
@@ -52,9 +50,6 @@ $(".control-room-list").addClass("visuallyhidden");
 $(".instruments-list").addClass("visuallyhidden");
 $(".software-list").addClass("visuallyhidden");
 $(".other-list").addClass("visuallyhidden");
-
-/*//Hide the engineer Read More buttons when the page is ready
-$(".engineer-button").addClass("visuallyhidden");*/
 
 
 
@@ -172,8 +167,6 @@ $(".engineer-photo").hover(revealReadMore);
 
 //On clicking .engineer-button, reveal .engineer-description
 $(".engineer-button").click(revealEngineer);
-
-
 
 
 });

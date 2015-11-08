@@ -661,8 +661,6 @@ footer p a:active {
   }
 }
 
-/*NEW deleted 1500*/
-
 /*For screens above 1920px*/
 @media screen and (min-width:1920px) {
   .menu {
