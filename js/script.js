@@ -1,12 +1,14 @@
+
+
 function createGoogleMap() {
+
   //This is the name of the ID where the map will be generated.
   var mapElement = document.getElementById("googleMap");
-
   //These are the properties of our map
   //Check out more controls at https://developers.google.com/maps/documentation/javascript/controls
   var mapProperties = {
     //Center of the map using a Latitude and Longitude
-    center:new google.maps.LatLng(47.5057627,19.0547137),
+    center:new google.maps.LatLng(47.5056983,19.0550394),
     //Set the zoom of the map
     zoom:15,
     //Set the type of the map
@@ -16,6 +18,11 @@ function createGoogleMap() {
   };
   //Finally we need to create the map by creating a "new" google map, passing in the mapElement and the mapProperties we just declared.
   var map = new google.maps.Map( mapElement, mapProperties);
+
+  var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(47.505673, 19.057636),
+  });
+  marker.setMap(map);
 }
 
 
@@ -25,6 +32,8 @@ $(document).ready(function() {
 if ($("#googleMap").length) {
   createGoogleMap();
 }
+
+
 
 // F U N C T I O N S
 

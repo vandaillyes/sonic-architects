@@ -311,7 +311,7 @@ padding: 20px 0;
 
 .social-media-icon:hover {
   opacity: 0.6;
-  transition: all 0.4s 0.2s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 /* Contact Info */
@@ -363,7 +363,7 @@ footer p a:active {
 }
 
 /*For screens above 400px*/ /*NEW*/
-@media screen and (min-width:400px) {
+@media screen and (min-width:400px), handheld and (orientation: portrait) {
   .menu-icon-holder {
     margin-right: 10px;
   }
@@ -392,48 +392,6 @@ footer p a:active {
     padding-left: 5px;
     letter-spacing: 1.8px;
   }
-  /*.menu-icon-holder {
-    display: none;
-  }*/
-  .menu {
-    /*position: relative;*/
-    /*display: block;*/
-    /*margin-top: -8px;*/ /*NEW*/
-  }
-  /*.aboutus {
-    position: absolute;
-    top: 15px;
-    left: 30px;
-  }
-  .services {
-    clear: none;
-    position: absolute;
-    top: 15px;
-    right: 30px;
-  }
-  .equipment {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    left: 30px;
-  }
-  .engineers {
-    clear: none;
-    position: absolute;
-    top: 75px;
-    right: 30px;
-  }
-  .contact {
-    clear: none;
-    position: absolute;
-    top: 135px;
-    right: 30px;
-    border-bottom: 1px #66666E solid;
-  }
-  .menu li {
-    float: left;
-    width: 40%;
-  }*/
   .photo-lane {
     padding-bottom: 50%; /*NEW*/
   }
@@ -539,7 +497,6 @@ footer p a:active {
       display: block;
       font-weight: 400;
       text-align: center;
-      /*transition: all 0.19s 0.2s ease-in-out; NEW moved here from 1200px*/
     }
     .menu li a:hover { /*NEW moved here from 1200px*/
       border-top: 3px solid #F5BB00;
@@ -658,7 +615,7 @@ footer p a:active {
     margin-top: -7px;
   }
   .menu {
-    width: 50%; /*NEW*/
+    width: 50%;
   }
     .menu li {
       width: auto;

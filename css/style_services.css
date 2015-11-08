@@ -293,7 +293,13 @@ header {
   margin: 5px auto;
   text-align: justify;
 }
-
+  .service-1-description p a:link,
+  .service-1-description p a:visited,
+  .service-1-description p a:hover,
+  .service-1-description p a:active {
+    text-decoration: none;
+    color: #F5BB00;
+  }
 
 /* Social Media */
 .social-media {
@@ -358,7 +364,7 @@ padding: 20px 0;
 
 .social-media-icon:hover {
   opacity: 0.6;
-  transition: all 0.4s 0.2s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 /* Contact Info */
@@ -401,6 +407,7 @@ footer p a:active {
 }
 
 /*Responsiveness to various screen sizes*/
+
 /*For screens above 375px*/
 @media screen and (min-width:375px) {
   .menu {
