@@ -200,7 +200,7 @@ a {
       .services,
       .equipment,
       .engineers {
-        border-bottom: 1px #66666E solid;
+        border-bottom: 1px solid #66666E;
       }
         .menu li a {
           color: #000;
@@ -223,8 +223,8 @@ a {
   .software-button,
   .other-button {
     text-align: center;
-    border: 1px #9999A1 solid;
-    border-bottom: 3px #9999A1 solid;
+    border: 1px solid #9999A1;
+    border-bottom: 3px solid #9999A1;
     border-radius: 2px;
     background-color: #E3E3E5;
     font-size: 0.5em;
@@ -470,7 +470,7 @@ footer {
   .control-room-button,
   .instruments-button,
   .software-button {
-    border-bottom: 1px #9999A1 solid;
+    border-bottom: 1px solid #9999A1;
   }
   .microphones-button:hover,
   .outboard-button:hover,
@@ -481,7 +481,7 @@ footer {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px #9999A1 solid;
+    border-bottom: 1px solid #9999A1;
   }
   .other-button:hover {
     background-color: #F4F4F6;

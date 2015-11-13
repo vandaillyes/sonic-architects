@@ -130,11 +130,19 @@ function revealOther(event) {
 //I found a bug that appeared on resizing the window: the list of equipment was sometimes hidden
 //when it should've been displayed or was displayed when it should've been hidden. This bug only occurred
 //under particular circumstances.
-//I inserted this resize function as a workaround.
+//I inserted these 2 resize functions as a workaround.
 $( window ).resize(function() {
 if ( $(window).width() < 550 ) {
   $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
-  $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css("color", "#000");
+  $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css({"color" : "#000",
+                                                                                                                                                      "background-color" : "#E3E3E5",
+                                                                                                                                                      "border" : "1px solid #9999A1",
+                                                                                                                                                      "border-bottom" : "3px solid #9999A1"});
+  }
+});
+$( window ).resize(function() {
+  if ( $(window).width() >= 550 ) {
+  $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
   }
 });
 

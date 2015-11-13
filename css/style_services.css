@@ -201,7 +201,7 @@ a {
       .services,
       .equipment,
       .engineers {
-        border-bottom: 1px #66666E solid;
+        border-bottom: 1px solid #66666E;
       }
         .menu li a {
           color: #000;
@@ -271,7 +271,7 @@ a {
         font-size: 1.2em;
         font-weight: 700;
         margin-bottom: 5px;
-        border-bottom: 1px #66666E solid;
+        border-bottom: 1px solid #66666E;
       }
       .service-description p a:link,
       .service-description p a:visited,
