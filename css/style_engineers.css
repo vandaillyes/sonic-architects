@@ -31,16 +31,6 @@ Developer @GA in LDN
   clear: both;
 }
 
-.alignright {
-  float: right;
-  padding: 0 0 10px 10px; /* note the padding around a right floated image */
-}
-
-.alignleft {
-  float: left;
-  padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -67,7 +57,7 @@ a {
   margin: auto;
 }
 
-/* Classes used by jQuery */ /*NEW*/
+/* Classes used by jQuery */
 .visuallyhidden {
   display: none;
 }
@@ -140,77 +130,6 @@ a {
 /* ABOUT US PAGE
 /**********************/
 
-/* Header */
-header {
-  height: 55px;
-  background-color: rgba(225, 223, 223, 0.63);
-  width: 100%;
-  margin: 0;
-}
-  .logo-icon-holder {
-    float: left;
-    margin: 5px 1px 0 10px;
-  }
-    .logo-icon {
-      height: 40px;
-      width: 40px;
-    }
-  .logo-text-holder {
-    float: left;
-    margin: 14px 0 0 2px;
-  }
-    .logo-text {
-      font-size: 0.8em;
-      font-weight: 700;
-      color: #000;
-      letter-spacing: 0.5px;
-      text-shadow: 1px 1px 1px #403F4C;
-    }
-  .menu-icon {
-    padding-bottom: 3px;
-  }
-    .menu-icon-holder {
-      float: right;
-      margin: 12px 5px 0 0;
-    }
-  .menu {
-    margin: -8px 0 0 0;
-    width: 100%;
-    height: 153px;
-    padding: 0;
-    text-align: center;
-    background-color: rgba(225, 223, 223, 0.63);
-  }
-    .menu li {
-      padding: 0;
-      width: 95%;
-      margin: 0 10px;
-      display: block;
-      float: right;
-      height: 30px;
-      padding: 0;
-    }
-    .services,
-    .equipment,
-    .engineers,
-    .contact {
-      clear: right;
-    }
-    .aboutus,
-    .services,
-    .equipment,
-    .engineers {
-      border-bottom: 1px #66666E solid;
-    }
-      .menu li a {
-        color: #000;
-        font-size: 0.5em;
-        font-weight: 400;
-        padding: 0;
-        display: block;
-        text-align: right;
-      }
-
 /* Photo Lane */
 .photo-lane {
   background: url(../images/engineers1_bg.jpg) no-repeat center #E3E3E5;
@@ -219,142 +138,206 @@ header {
   padding-bottom: 65%;
 }
 
+/* Header */
+  header {
+    height: 55px;
+    background-color: rgba(225, 223, 223, 0.63);
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+    .logo-icon-holder {
+      float: left;
+      margin: 5px 1px 0 10px;
+    }
+      .logo-icon {
+        height: 40px;
+        width: 40px;
+      }
+    .logo-text-holder {
+      float: left;
+      margin: 14px 0 0 2px;
+    }
+      .logo-text {
+        font-size: 0.8em;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 1px #403F4C;
+      }
+    .menu-icon-holder {
+      float: right;
+      margin: 12px 5px 0 0;
+    }
+      .menu-icon {
+        padding-bottom: 3px;
+      }
+    .menu {
+      margin: -8px 0 0 0;
+      width: 100%;
+      height: 153px;
+      padding: 0;
+      text-align: center;
+      background-color: rgba(225, 223, 223, 0.63);
+    }
+      .menu li {
+        padding: 0;
+        width: 95%;
+        margin: 0 10px;
+        display: block;
+        float: right;
+        height: 30px;
+        padding: 0;
+      }
+      .services,
+      .equipment,
+      .engineers,
+      .contact {
+        clear: right;
+      }
+      .aboutus,
+      .services,
+      .equipment,
+      .engineers {
+        border-bottom: 1px #66666E solid;
+      }
+        .menu li a {
+          color: #000;
+          font-size: 0.5em;
+          font-weight: 400;
+          padding: 0;
+          display: block;
+          text-align: right;
+        }
+
 /* Engineers */
 .engineers-box {
   background-color: #F4F4F6;
   margin-top: 30px;
 }
-.engineer-wrapper {
-  margin: 0 5%;
-  position: relative;
-}
-.engineer-photo:hover .engineer-button {
-  display: block;
-}
-.engineer-photo {
-  margin: 0;
-  padding: 0;
-}
-.engineer-img {
-  height: 66%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.engineer-img:hover {
-  opacity: 0.6;
-}
-.engineer-name {
-  width: 95%;
-  margin: 0 auto 20px auto;
-}
-.engineer-name p {
-  font-size: 0.4em;
-  text-align: center;
-  font-weight: 400;
-}
-.engineer-button {
-  text-align: center;
-  border: 1px solid #9999A1;
-  border-bottom: 3px solid #9999A1;
-  border-radius: 2px;
-  background-color: #E3E3E5;
-  font-size: 0.4em;
-  font-weight: 400;
-  margin: 10px auto 20px auto;
-  padding: 5px;
-  width: 150px;
-  display: none;
-  position: absolute;
-  top: 140px;
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
-}
-.engineer-button a {
-  color: #000;
-}
-.engineer-button:hover {
-  background-color: #F5BB00;
-  border: 1px solid #c49500;
-  border-bottom: 3px solid #c49500;
-}
-.engineer-description {
-  font-size: 0.45em;
-  display: none;
-  padding: 10px;
-  width: 90%;
-  margin: 5px auto;
-  text-align: justify;
-}
-
+  .engineer-wrapper {
+    margin: 0 5%;
+    position: relative;
+  }
+    .engineer-photo {
+      margin: 0;
+      padding: 0;
+    }
+      .engineer-img {
+        height: 66%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .engineer-button {
+        text-align: center;
+        border: 1px solid #9999A1;
+        border-bottom: 3px solid #9999A1;
+        border-radius: 2px;
+        background-color: #E3E3E5;
+        font-size: 0.4em;
+        font-weight: 400;
+        margin: 10px auto 20px auto;
+        padding: 5px;
+        width: 150px;
+        display: none;
+        position: absolute;
+        top: 140px;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+      }
+        .engineer-button a {
+          color: #000;
+        }
+      .engineer-button:hover {
+        background-color: #F5BB00;
+        border: 1px solid #c49500;
+        border-bottom: 3px solid #c49500;
+      }
+    .engineer-name {
+      width: 95%;
+      margin: 0 auto 20px auto;
+    }
+      .engineer-name p {
+        font-size: 0.4em;
+        text-align: center;
+        font-weight: 400;
+      }
+    .engineer-description {
+      font-size: 0.45em;
+      display: block;
+      padding: 10px;
+      width: 90%;
+      margin: 10px auto;
+      text-align: justify;
+    }
 
 /* Social Media */
 .social-media {
 background-color: #F4F4F6;
 padding: 20px 0;
 }
-.social-media-container-1 {
-  float: left;
-  text-align: center;
-  position: relative;
-  width: 50%;
-  height: 50px;
-}
-  .facebook {
+  .social-media-container-1 {
     float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 140px;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 50px;
   }
-  .twitter {
-    float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 75px;
-  }
-  .instagram {
-    float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 15px;
-  }
-.social-media-container-2 {
-  float: right;
-  position: relative;
-  width: 50%;
-  height: 50px;
-}
-  .linkedin {
+    .facebook {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 120px;
+    }
+    .twitter {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 65px;
+    }
+    .instagram {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 12px;
+    }
+  .social-media-container-2 {
     float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 15px;
+    position: relative;
+    width: 50%;
+    height: 50px;
   }
-  .googleplus {
-    float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 75px;
-  }
-  .youtube {
-    float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 140px;
-  }
-
-.social-media-icon:hover {
-  opacity: 0.6;
-  transition: all 0.4s ease-out;
-}
+    .linkedin {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 12px;
+    }
+    .googleplus {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 65px;
+    }
+    .youtube {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 120px;
+    }
+    .social-media-icon:hover {
+      opacity: 0.6;
+      transition: all 0.4s ease-out;
+    }
 
 /* Contact Info */
 .contact-info {
@@ -387,13 +370,13 @@ footer {
   padding: 10px 0 10px 0;
   clear: both;
 }
-footer p a:link,
-footer p a:visited,
-footer p a:hover,
-footer p a:active {
-  text-decoration: none;
-  color: #FFF;
-}
+  footer p a:link,
+  footer p a:visited,
+  footer p a:hover,
+  footer p a:active {
+    text-decoration: none;
+    color: #FFF;
+  }
 
 /*Responsiveness to various screen sizes*/
 
@@ -402,14 +385,14 @@ footer p a:active {
   .menu {
     height: 190px;
   }
-  .menu li {
-    margin-top: 3px;
+    .menu li {
+      margin-top: 3px;
+    }
+  .engineer-button {
+    top: 172px;
   }
   .engineer-name {
     width: 321px;
-  }
-  .engineer-button {
-    top: 172px;
   }
 }
 
@@ -421,15 +404,33 @@ footer p a:active {
   .menu {
     height: 205px;
   }
-  .menu li {
-    margin-top: 5px;
-  }
+    .menu li {
+      margin-top: 5px;
+    }
   .engineer-photo {
     width: 360px;
     margin: 0 auto;
   }
-  .engineer-button {
-    top: 190px;
+    .engineer-button {
+      top: 190px;
+    }
+  .facebook {
+    right: 140px;
+  }
+  .twitter {
+    right: 75px;
+  }
+  .instagram {
+    right: 15px;
+  }
+  .linkedin {
+    left: 15px;
+  }
+  .googleplus {
+    left: 75px;
+  }
+  .youtube {
+    left: 140px;
   }
 }
 
@@ -442,22 +443,22 @@ footer p a:active {
 
 /*For screens above 450px*/
 @media screen and (min-width:450px) {
-  .menu {
-    height: 212px;
-  }
   .photo-lane {
     padding-bottom: 59%;
   }
+    .menu {
+      height: 212px;
+    }
 }
 
 /*For screens above 500px*/
 @media screen and (min-width:500px) {
-  .menu {
-    height: 210px;
-  }
   .photo-lane {
     padding-bottom: 53%;
   }
+    .menu {
+      height: 210px;
+    }
   .engineer-button {
     top: 190px;
   }
@@ -465,16 +466,16 @@ footer p a:active {
 
 /*For screens above 550px*/
 @media screen and (min-width:550px) {
-  .logo-text {
-    padding-left: 5px;
-    letter-spacing: 1.8px;
-  }
-  .menu {
-    height: 220px;
-  }
   .photo-lane {
     padding-bottom: 50%;
   }
+    .logo-text {
+      padding-left: 5px;
+      letter-spacing: 1.8px;
+    }
+    .menu {
+      height: 220px;
+    }
   .engineer-button {
     top: 190px;
   }
@@ -482,22 +483,22 @@ footer p a:active {
 
 /*For screens above 600px*/
 @media screen and (min-width:600px) {
-  .menu {
-    height: 226px;
-  }
-  .engineer-img {
-    height: 60%;
-    padding: 0 10px;
-  }
-  .engineer-photo {
-    margin: 0 auto;
-  }
-  .engineer-button {
-    top: 178px;
-  }
   .photo-lane {
     padding-bottom: 47%;
   }
+    .menu {
+      height: 226px;
+    }
+  .engineer-photo {
+    margin: 0 auto;
+  }
+    .engineer-img {
+      height: 60%;
+      padding: 0 10px;
+    }
+    .engineer-button {
+      top: 178px;
+    }
   .facebook {
     right: 160px;
   }
@@ -527,14 +528,14 @@ footer p a:active {
 
 /*For screens above 700px*/
 @media screen and (min-width:700px) {
-  .menu {
-    height: 219px;
-  }
-  .engineer-img {
-    height: 55%;
-  }
   .photo-lane {
     padding-bottom: 39%;
+  }
+    .menu {
+      height: 219px;
+    }
+  .engineer-img {
+    height: 55%;
   }
   .contact-logo {
     float: left;
@@ -549,16 +550,17 @@ footer p a:active {
   }
     .contact-info ul li {
     display: block;
+  }
 }
 
 /*For screens above 750px*/
 @media screen and (min-width:750px) {
-  .menu {
-    height: 215px;
-  }
   .photo-lane {
     padding-bottom: 36%;
   }
+    .menu {
+      height: 215px;
+    }
   .engineer-button {
     top: 178px;
   }
@@ -566,12 +568,12 @@ footer p a:active {
 
 /*For screens above 800px*/
 @media screen and (min-width:800px) {
-  .menu {
-    height: 210px;
-  }
   .photo-lane {
     padding-bottom: 33%;
   }
+    .menu {
+      height: 210px;
+    }
   .engineer-img {
     height: 50%;
   }
@@ -588,112 +590,124 @@ footer p a:active {
 
 /*For screens above 850px*/
 @media screen and (min-width:850px) {
-  .logo-icon-holder {
-    display: inline;
-  }
-  .logo-text-holder {
-    display: inline;
-  }
-  .menu-icon-holder {
-    display: none;
-    width: 1%;
-  }
-  .menu {
-    height: 0;
-    float: right;
-    position: static;
-    display: inline;
-    width: 64%;
-    margin-top: -40px;
-    margin-right: 0;
-  }
-    .menu li {
-      float: left;
-      display: inline;
-      width: auto;
-      margin-left: 20px;
-      background: none;
-      border: none;
-    }
-    .menu li a {
-      color: #000;
-      display: block;
-      font-weight: 400;
-      text-align: center;
-    }
-    .menu li a:hover {
-      border-top: 3px solid #F5BB00;
-    }
-    .aboutus {
-      position: static;
-    }
-    .services {
-      position: static;
-    }
-    .equipment {
-      position: static;
-    }
-    .engineers {
-      position: static;
-    }
-    .contact {
-      position: static;
-    }
-    .engineers a {
-      border-top: 3px solid #F5BB00;
-    }
-    .aboutus a,
-    .services a,
-    .equipment a,
-    .contact a {
-      border-top: 3px solid rgba(245,187,0,0);
-    }
   .photo-lane {
     padding-bottom: 30%;
   }
+    .logo-icon-holder {
+      display: inline;
+    }
+    .logo-text-holder {
+      display: inline;
+    }
+    .menu-icon-holder {
+      display: none;
+      width: 1%;
+    }
+    .menu {
+      height: 0;
+      float: right;
+      position: static;
+      display: inline;
+      width: 64%;
+      margin-top: -40px;
+      margin-right: 0;
+    }
+      .menu li {
+        float: left;
+        display: inline;
+        width: auto;
+        margin-left: 20px;
+        background: none;
+        border: none;
+        position: static;
+      }
+        .menu li a {
+          color: #000;
+          display: block;
+          font-weight: 400;
+          text-align: center;
+        }
+        .menu li a:hover {
+          border-top: 3px solid #F5BB00;
+        }
+        .engineers a {
+          border-top: 3px solid #F5BB00;
+        }
+        .aboutus a,
+        .services a,
+        .equipment a,
+        .contact a {
+          border-top: 3px solid rgba(245,187,0,0);
+        }
   .engineer-wrapper {
     float: left;
     width: 32%;
     margin: 0 5px;
   }
-  .engineer-photo {
-    width: 280px;
-  }
-  .engineer-button {
-    top: 127px;
-    width: 120px;
-  }
-  .engineer-name {
-    width: 95%;
-    margin: 0 auto 20px auto;
-  }
-  .engineer-name p {
-    font-size: 0.4em;
-  }
+    .engineer-photo {
+      width: 280px;
+    }
+      .engineer-img:hover {
+        opacity: 0.6;
+      }
+      .engineer-photo:hover .engineer-button {
+        display: block;
+      }
+      .engineer-button {
+        top: 127px;
+        width: 120px;
+      }
+    .engineer-name {
+      width: 95%;
+      margin: 0 auto 20px auto;
+    }
+    #engineer-2-name {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+      .engineer-name p {
+        font-size: 0.4em;
+      }
+    .engineer-description {
+      display: none;
+    }
+    #engineer-2-description {
+      margin-top: 0px;
+    }
   .contact-info ul {
   margin-top: -3px;
   }
-  .contact-info ul li {
-  display: inline-block;
-  margin-left: 30px;
-}
+    .contact-info ul li {
+    display: inline-block;
+    margin-left: 30px;
+    }
 .phone {
   padding-right: 30px;
   border-right: 1px solid #000;
 }
 
+/*For screens above 864px*/
+@media screen and (min-width:864px) {
+  #engineer-2-name {
+    margin-bottom: 20px;
+  }
+  #engineer-2-description {
+    margin-top: 5px;
+  }
+}
+
 /*For screens above 900px*/
 @media screen and (min-width:900px) {
-  .menu {
-    width: 59%;
-  }
-    .menu li {
-      width: 17%;
-      margin-left: 5px;
-    }
   .photo-lane {
     padding-bottom: 27%;
   }
+    .menu {
+      width: 59%;
+    }
+      .menu li {
+        width: 17%;
+        margin-left: 5px;
+      }
   .engineer-button {
     top: 127px;
   }
@@ -704,6 +718,10 @@ footer p a:active {
   .menu {
     width: 56%;
   }
+  #engineer-2-name {
+    width: 95%;
+  }
+}
 
 /*For screens above 1000px*/
 @media screen and (min-width:1000px) {
@@ -713,20 +731,20 @@ footer p a:active {
   .engineer-photo {
     width: 300px;
   }
-  .engineer-button {
-    top: 140px;
-    width: 150px;
-  }
-  }
+    .engineer-button {
+      top: 140px;
+      width: 150px;
+    }
+}
 
 /*For screens above 1024px*/
 @media screen and (min-width:1024px) {
-  .menu {
-    width: 52%;
-  }
   .photo-lane {
     padding-bottom: 24%;
   }
+    .menu {
+      width: 52%;
+    }
 }
 
 /*For screens above 1050px*/
@@ -738,9 +756,6 @@ footer p a:active {
 
 /*For screens above 1100px*/
 @media screen and (min-width:1100px) {
-  .menu {
-    width: 49%;
-  }
   .logo-icon {
     margin-left: 7px;
   }
@@ -749,12 +764,15 @@ footer p a:active {
     letter-spacing: 0.7px;
     margin-top: -5px;
   }
+  .menu {
+    width: 49%;
+  }
   .engineer-photo {
     width: 330px;
   }
-  .engineer-button {
-    top: 160px;
-  }
+    .engineer-button {
+      top: 160px;
+    }
 }
 
 /*For screens above 1150px*/
@@ -762,39 +780,40 @@ footer p a:active {
   .menu {
     width: 47%;
   }
+}
 
 /*For screens above 1200px*/
 @media screen and (min-width:1200px) {
-  header {
-    position: fixed;
-  }
-  .logo-icon{
-    margin-left: 15px;
-  }
-  .logo-text {
-    font-size: 1em;
-    letter-spacing: 1px;
-    margin-top: -7px;
-  }
-  .menu {
-    width: 50%;
-  }
-  .menu li {
-    width: auto;
-    margin: 0 0 0 40px;
-  }
   .photo-lane {
     padding-bottom: 22%;
   }
+    header {
+      position: fixed;
+    }
+      .logo-icon {
+        margin-left: 15px;
+      }
+      .logo-text {
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-top: -7px;
+      }
+      .menu {
+        width: 50%;
+      }
+        .menu li {
+          width: auto;
+          margin: 0 0 0 40px;
+        }
   .engineers-box {
     margin-bottom: 28px;
   }
-  .engineer-photo {
-    width: 360px;
-  }
-  .engineer-button {
-    top: 178px;
-  }
+    .engineer-photo {
+      width: 360px;
+    }
+      .engineer-button {
+        top: 178px;
+      }
 }
 
   /*For screens above 1250px*/
@@ -814,14 +833,14 @@ footer p a:active {
     .engineer-photo {
       width: 90%;
     }
-    .engineer-button {
-      top: 182px;
-    }
+      .engineer-button {
+        top: 182px;
+      }
 }
 
   /*For screens above 1300px*/
   @media screen and (min-width:1300px) {
-    .engineer-button { /*NEW NEW*/
+    .engineer-button {
       top: 189px;
     }
   }
@@ -832,14 +851,14 @@ footer p a:active {
       width: 45%;
     }
     .engineer-button {
-      top: 198px; /*NEW NEW*/
+      top: 198px;
     }
   }
 
   /*For screens above 1400px*/
   @media screen and (min-width:1400px) {
     .engineer-button {
-      top: 208px; /*NEW NEW*/
+      top: 208px;
     }
   }
 
@@ -849,14 +868,14 @@ footer p a:active {
       width: 41%;
     }
     .engineer-button {
-      top: 214px; /*NEW NEW*/
+      top: 214px;
     }
   }
 
   /*For screens above 1500px*/
   @media screen and (min-width:1500px) {
     .engineer-button {
-      top: 222px; /*NEW NEW*/
+      top: 222px;
     }
   }
 
@@ -866,14 +885,14 @@ footer p a:active {
       width: 38%;
     }
     .engineer-button {
-      top: 231px; /*NEW NEW*/
+      top: 231px;
     }
   }
 
   /*For screens above 1600px*/
   @media screen and (min-width:1600px) {
     .engineer-button {
-      top: 241px; /*NEW NEW*/
+      top: 241px;
     }
   }
 
@@ -883,14 +902,14 @@ footer p a:active {
       width: 36%;
     }
     .engineer-button {
-      top: 250px; /*NEW NEW*/
+      top: 250px;
     }
   }
 
   /*For screens above 1700px*/
   @media screen and (min-width:1700px) {
     .engineer-button {
-      top: 259px; /*NEW NEW*/
+      top: 259px;
     }
   }
 
@@ -900,14 +919,14 @@ footer p a:active {
       width: 34%;
     }
     .engineer-button {
-      top: 268px; /*NEW NEW*/
+      top: 268px;
     }
   }
 
   /*For screens above 1800px*/
   @media screen and (min-width:1800px) {
     .engineer-button {
-      top: 277px; /*NEW NEW*/
+      top: 277px;
     }
   }
 
@@ -917,14 +936,14 @@ footer p a:active {
       width: 32%;
     }
     .engineer-button {
-      top: 286px; /*NEW NEW*/
+      top: 286px;
     }
   }
 
   /*For screens above 1900px*/
   @media screen and (min-width:1900px) {
     .engineer-button {
-      top: 295px; /*NEW NEW*/
+      top: 295px;
     }
   }
 

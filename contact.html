@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
+
   	<meta charset="utf-8">
   	<meta name="description" content="Recording studio in the heart of Budapest">
   	<meta name="keywords" content="recording, studio, music, production">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Sonic Architects Recording Studio</title>
-		<!-- adding favicon to display next to title -->
+		<!-- Adding favicon to display next to title -->
 		<link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
-		<!-- external CSS link -->
+		<!-- External CSS link -->
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style_contact.css">
 		<!-- Google Fonts -->
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
 
 	</head>
@@ -23,17 +23,16 @@
 
 		<div id="container">
 
-
 			<div class="photo-lane clearfix">
 				<header class="clearfix">
 					<div class="logo clearfix">
-						<div class="logo-icon-holder clearfix">
+						<div class="logo-icon-holder">
 							<img class="logo-icon" src="images/headphones.svg" alt="headphone icon" />
 						</div>
-						<div class="logo-text-holder clearfix">
+						<div class="logo-text-holder">
 							<h1 class="logo-text">Sonic Architects</h1>
 						</div>
-						<div class="menu-icon-holder clearfix">
+						<div class="menu-icon-holder">
 							<img class="menu-icon" src="images/hamburger_menu.svg" alt="menu icon" />
 						</div>
 					</div>
@@ -47,7 +46,7 @@
 						</ul>
 					</nav>
 				</header>
-			</div>
+			</div><!-- .photo-lane -->
 
 			<div class="address-contact">
 				<div class="address">
@@ -58,14 +57,15 @@
 					<h2>Email: sonic.architects.crew@gmail.com</h2>
 				</div>
 				<form id="contactus" action="" method="post" enctype="multipart/form-data">
+					<!-- Originally, I created a proper form but that obviously didn't work without a backend server.
+					So I went for an embedded Google Form. Nevertheless, I am keeping this code in case I want to use it in the future -->
 					<!--<input class="name" type="text" name="client_name" placeholder="Your name" />
 					<input class="email" type="email" name="client_email" placeholder="Your email" />
 					<textarea class="message" name="client_message" rows="8" cols="50" form="contactus" placeholder="Your message"></textarea>
 					<input class="send-message" type="submit" name="name" value="Send message">-->
-					<iframe src="https://docs.google.com/forms/d/1MN--rwxigpEhpHa-4lf4QOmNIxgAIkxSdP3HvQVt1CI/viewform?embedded=true" width="310" height="505" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+					<iframe src="https://docs.google.com/forms/d/1MN--rwxigpEhpHa-4lf4QOmNIxgAIkxSdP3HvQVt1CI/viewform?embedded=true" width="310" height="505" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading...</iframe>
 				</form>
-			</div>
-
+			</div><!-- .address-contact -->
 
 			<div class="social-media clearfix">
 				<div class="social-media-container-1 clearfix">
@@ -90,7 +90,7 @@
 						<a href="http://www.youtube.com" target="_blank"><img class="social-media-icon" src="images/youtube.svg" alt="YouTube icon" /></a>
 					</nav>
 				</div>
-			</div>
+			</div><!-- .social-media -->
 
 			<div class="contact-info clearfix">
 				<h3 class="contact-logo">Sonic Architects</h3>
@@ -98,7 +98,7 @@
 					<li class="phone">Call: +36 1 234 5678</li>
 					<li>Email: sonic.architects.crew@gmail.com</li>
 				</ul>
-			</div>
+			</div><!-- .contact-info -->
 
 			<footer>
 				<p>
@@ -106,13 +106,12 @@
 				</p>
 			</footer>
 
-
-
 		</div><!-- #container -->
 
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-	<script src="js/script.js"></script>
-	<script src="js/parsley.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/script.js"></script>
+
 	</body>
+
 </html>

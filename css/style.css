@@ -31,15 +31,6 @@ Developer @GA in LDN
   clear: both;
 }
 
-.alignright {
-  float: right;
-  padding: 0 0 10px 10px; /* note the padding around a right floated image */
-}
-
-.alignleft {
-  float: left;
-  padding: 0 10px 10px 0; /* note the padding around a left floated image */
-}
 
 /******************************************
 /* BASE STYLES
@@ -65,15 +56,14 @@ a {
 #container {
   width: 100%;
   margin: auto;
-  /*height: 700px;*/ /*NEW*/
 }
 
-/* Classes used by jQuery */ /*NEW*/
+/* Classes used by jQuery */
 .visuallyhidden {
   display: none;
 }
 
-/* Animations */ /*NEW*/
+/* Animations */
 
 /* Tilt hamburger */
 @keyframes tilt-me {
@@ -141,178 +131,177 @@ a {
 /* ABOUT US PAGE
 /**********************/
 
-/* Header */
-header {
-  height: 55px;
-  background-color: rgba(225, 223, 223, 0.63);
-  width: 100%;
-  margin: 0;
-}
-  .logo-icon-holder {
-    float: left;
-    margin: 5px 1px 0 10px;
-  }
-    .logo-icon {
-      height: 40px;
-      width: 40px;
-    }
-  .logo-text-holder {
-    float: left;
-    margin: 14px 0 0 2px;
-  }
-    .logo-text {
-      font-size: 0.8em;
-      font-weight: 700;
-      color: #000;
-      letter-spacing: 0.5px;
-      text-shadow: 1px 1px 1px #403F4C;
-    }
-  .menu-icon-holder {
-    float: right;
-    margin: 12px 5px 0 0;
-  }
-    .menu-icon {
-      padding-bottom: 3px;
-    }
-  .menu {
-    margin: -8px 0 0 0; /*NEW*/
-    width: 100%;
-    height: 250px; /*NEW*/
-    text-align: center;
-    background-color: rgba(225, 223, 223, 0.63);
-  }
-    .menu li {
-      padding: 0;
-      width: 95%;
-      margin: 0px 10px; /*NEW*/
-      display: block;
-      float: right;
-      height: 30px;
-      padding: 0;
-    }
-    .services,
-    .equipment,
-    .engineers,
-    .contact {
-      clear: right;
-    }
-    .aboutus,
-    .services,
-    .equipment,
-    .engineers {
-      border-bottom: 1px #66666E solid; /*NEW*/
-    }
-      .menu li a {
-        color: #000;
-        font-size: 0.5em;
-        font-weight: 400;
-        padding: 0;
-        display: block;
-        text-align: right;
-      }
-
 /* Photo Lane */
 .photo-lane {
   background: url(../images/aboutus_bg.jpg) no-repeat center #E3E3E5;
   background-size: cover;
   height: 0;
-  padding-bottom: 65%; /*NEW*/
+  padding-bottom: 65%;
 }
+
+  /* Header */
+  header {
+    height: 55px;
+    background-color: rgba(225, 223, 223, 0.63);
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+    .logo-icon-holder {
+      float: left;
+      margin: 5px 1px 0 10px;
+    }
+      .logo-icon {
+        height: 40px;
+        width: 40px;
+      }
+    .logo-text-holder {
+      float: left;
+      margin: 14px 0 0 2px;
+    }
+      .logo-text {
+        font-size: 0.8em;
+        font-weight: 700;
+        color: #000;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 1px #403F4C;
+      }
+    .menu-icon-holder {
+      float: right;
+      margin: 12px 5px 0 0;
+    }
+      .menu-icon {
+        padding-bottom: 3px;
+      }
+    .menu {
+      margin: -8px 0 0 0;
+      width: 100%;
+      height: 250px;
+      text-align: center;
+      background-color: rgba(225, 223, 223, 0.63);
+    }
+      .menu li {
+        padding: 0;
+        width: 95%;
+        margin: 0px 10px;
+        display: block;
+        float: right;
+        height: 30px;
+        padding: 0;
+      }
+      .services,
+      .equipment,
+      .engineers,
+      .contact {
+        clear: right;
+      }
+      .aboutus,
+      .services,
+      .equipment,
+      .engineers {
+        border-bottom: 1px #66666E solid;
+      }
+        .menu li a {
+          color: #000;
+          font-size: 0.5em;
+          font-weight: 400;
+          padding: 0;
+          display: block;
+          text-align: right;
+        }
 
 /* Who We Are */
 .who-we-are {
   background-color: #F4F4F6;
   margin-top: -10px;
 }
-.who-we-are h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 0.5em;
-  font-weight: 400;
-  color: #000;
-  padding-top: 10px;
-  width: 90%;
-  margin: 10px auto;
-}
+  .who-we-are h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    font-weight: 400;
+    color: #000;
+    padding-top: 10px;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .who-we-are hr {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-.who-we-are hr {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.who-we-are p {
-  font-size: 0.45em;
-  padding: 10px;
-  width: 90%;
-  margin: 5px auto;
-  text-align: justify;
-}
+  .who-we-are p {
+    font-size: 0.45em;
+    padding: 10px;
+    width: 90%;
+    margin: 5px auto;
+    text-align: justify;
+  }
 
 /* Social Media */
 .social-media {
 background-color: #F4F4F6;
 padding: 20px 0;
 }
-.social-media-container-1 {
-  float: left;
-  text-align: center;
-  position: relative;
-  width: 50%;
-  height: 50px;
-}
-  .facebook {
+  .social-media-container-1 {
     float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 140px;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 50px;
   }
-  .twitter {
-    float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 75px;
-  }
-  .instagram {
-    float: left;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 15px;
-  }
-.social-media-container-2 {
-  float: right;
-  position: relative;
-  width: 50%;
-  height: 50px;
-}
-  .linkedin {
+    .facebook {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 120px;
+    }
+    .twitter {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 65px;
+    }
+    .instagram {
+      float: left;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 12px;
+    }
+  .social-media-container-2 {
     float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 15px;
+    position: relative;
+    width: 50%;
+    height: 50px;
   }
-  .googleplus {
-    float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 75px;
-  }
-  .youtube {
-    float: right;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 140px;
-  }
-
-.social-media-icon:hover {
-  opacity: 0.6;
-  transition: all 0.4s ease-out;
-}
+    .linkedin {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 12px;
+    }
+    .googleplus {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 65px;
+    }
+    .youtube {
+      float: right;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 120px;
+    }
+    .social-media-icon:hover {
+      opacity: 0.6;
+      transition: all 0.4s ease-out;
+    }
 
 /* Contact Info */
 .contact-info {
@@ -345,62 +334,80 @@ footer {
   padding: 10px 0 10px 0;
   clear: both;
 }
-footer p a:link,
-footer p a:visited,
-footer p a:hover,
-footer p a:active {
-  text-decoration: none;
-  color: #FFF;
-}
+  footer p a:link,
+  footer p a:visited,
+  footer p a:hover,
+  footer p a:active {
+    text-decoration: none;
+    color: #FFF;
+  }
 
 /*Responsiveness to various screen sizes*/
 
-/*For screens above 375px*/ /*NEW*/
+/*For screens above 375px*/
 @media screen and (min-width:375px) {
   .menu li {
     margin-top: 3px;
   }
 }
 
-/*For screens above 400px*/ /*NEW*/
-@media screen and (min-width:400px), handheld and (orientation: portrait) {
+/*For screens above 400px*/
+@media screen and (min-width:400px) {
   .menu-icon-holder {
     margin-right: 10px;
   }
   .menu li {
     margin-top: 5px;
   }
+  .facebook {
+    right: 140px;
+  }
+  .twitter {
+    right: 75px;
+  }
+  .instagram {
+    right: 15px;
+  }
+  .linkedin {
+    left: 15px;
+  }
+  .googleplus {
+    left: 75px;
+  }
+  .youtube {
+    left: 140px;
+  }
 }
 
 /*For screens above 450px*/
 @media screen and (min-width:450px) {
   .photo-lane {
-    padding-bottom: 59%; /*NEW*/
+    padding-bottom: 59%;
   }
 }
 
 /*For screens above 500px*/
 @media screen and (min-width:500px) {
   .photo-lane {
-    padding-bottom: 53%; /*NEW*/
+    padding-bottom: 53%;
   }
 }
 
 /*For screens above 550px*/
 @media screen and (min-width:550px) {
-  .logo-text {
-    padding-left: 5px;
-    letter-spacing: 1.8px;
-  }
   .photo-lane {
-    padding-bottom: 50%; /*NEW*/
+    padding-bottom: 50%;
   }
+    .logo-text {
+      padding-left: 5px;
+      letter-spacing: 1.8px;
+    }
 }
 
 /*For screens above 600px*/
 @media screen and (min-width:600px) {
   .photo-lane {
-    padding-bottom: 47%; /*NEW*/
+    padding-bottom: 47%;
   }
   .facebook {
     right: 160px;
@@ -425,14 +432,14 @@ footer p a:active {
 /*For screens above 650px*/
 @media screen and (min-width:650px) {
   .photo-lane {
-    padding-bottom: 43%; /*NEW*/
+    padding-bottom: 43%;
   }
 }
 
 /*For screens above 700px*/
 @media screen and (min-width:700px) {
   .photo-lane {
-    padding-bottom: 39%; /*NEW*/
+    padding-bottom: 39%;
   }
   .contact-logo {
     float: left;
@@ -452,112 +459,98 @@ footer p a:active {
 /*For screens above 750px*/
 @media screen and (min-width:750px) {
   .photo-lane {
-    padding-bottom: 36%; /*NEW*/
+    padding-bottom: 36%;
   }
 }
 
 /*For screens above 800px*/
 @media screen and (min-width:800px) {
   .photo-lane {
-    padding-bottom: 33%; /*NEW*/
+    padding-bottom: 33%;
   }
 }
 
 /*For screens above 850px*/
 @media screen and (min-width:850px) {
-  .logo-icon-holder {
-    display: inline;
-  }
-  .logo-text-holder {
-    display: inline;
-  }
-  .menu-icon-holder {
-    display: none; /*NEW*/
-    width: 1%;
-  }
-  .menu {
-    height: 0;
-    float: right;
-    position: static;
-    display: inline;
-    width: 64%; /*NEW NEW*/
-    margin-top: -40px;
-    margin-right: 0;
-  }
-    .menu li {
-      float: left;
-      display: inline;
-      width: auto; /*NEW*/
-      margin-left: 20px; /*NEW*/
-      background: none;
-      border: none;
-    }
-    .menu li a {
-      color: #000;
-      display: block;
-      font-weight: 400;
-      text-align: center;
-    }
-    .menu li a:hover { /*NEW moved here from 1200px*/
-      border-top: 3px solid #F5BB00;
-    }
-    .aboutus {
-      position: static;
-    }
-    .services {
-      position: static;
-    }
-    .equipment {
-      position: static;
-    }
-    .engineers {
-      position: static;
-    }
-    .contact {
-      position: static;
-    }
-    .aboutus a {
-      border-top: 3px solid #F5BB00;
-    }
-    .services a,
-    .equipment a,
-    .engineers a,
-    .contact a {
-      border-top: 3px solid rgba(245,187,0,0); /*NEW*/
-    }
   .photo-lane {
-    padding-bottom: 30%; /*NEW*/
+    padding-bottom: 30%;
   }
+    .logo-icon-holder {
+      display: inline;
+    }
+    .logo-text-holder {
+      display: inline;
+    }
+    .menu-icon-holder {
+      display: none;
+      width: 1%;
+    }
+    .menu {
+      height: 0;
+      float: right;
+      position: static;
+      display: inline;
+      width: 64%;
+      margin-top: -40px;
+      margin-right: 0;
+    }
+      .menu li {
+        float: left;
+        display: inline;
+        width: auto;
+        margin-left: 20px;
+        background: none;
+        border: none;
+        position: static;
+      }
+        .menu li a {
+          color: #000;
+          display: block;
+          font-weight: 400;
+          text-align: center;
+        }
+        .menu li a:hover {
+          border-top: 3px solid #F5BB00;
+        }
+        .aboutus a {
+          border-top: 3px solid #F5BB00;
+        }
+        .services a,
+        .equipment a,
+        .engineers a,
+        .contact a {
+          border-top: 3px solid rgba(245,187,0,0);
+        }
   .contact-info ul {
   margin-top: -3px;
-}
-  .contact-info ul li {
-  display: inline-block;
-  margin-left: 30px;
-}
-.phone {
-  padding-right: 30px;
-  border-right: 1px solid #000;
-}
+  }
+    .contact-info ul li {
+    display: inline-block;
+    margin-left: 30px;
+    }
+  .phone {
+    padding-right: 30px;
+    border-right: 1px solid #000;
+  }
 }
 
 /*For screens above 900px*/
 @media screen and (min-width:900px) {
-  .menu {
-    width: 59%; /*NEW*/
-  }
   .photo-lane {
-    padding-bottom: 27%; /*NEW*/
+    padding-bottom: 27%;
   }
+    .menu {
+      width: 59%;
+    }
 }
 
-/*For screens above 950px*/ /*NEW*/
+/*For screens above 950px*/
 @media screen and (min-width:950px) {
   .menu {
     width: 56%;
   }
 
-/*For screens above 1000px*/ /*NEW*/
+/*For screens above 1000px*/
 @media screen and (min-width:1000px) {
   .menu {
     width: 53%;
@@ -565,15 +558,15 @@ footer p a:active {
 
 /*For screens above 1024px*/
 @media screen and (min-width:1024px) {
-  .menu {
-    width: 52%; /*NEW*/
-  }
   .photo-lane {
-    padding-bottom: 24%; /*NEW*/
+    padding-bottom: 24%;
   }
+    .menu {
+      width: 52%;
+    }
 }
 
-/*For screens above 1050px*/ /*NEW*/
+/*For screens above 1050px*/
 @media screen and (min-width:1050px) {
   .menu {
     width: 51%;
@@ -591,11 +584,11 @@ footer p a:active {
     margin-top: -5px;
   }
   .menu {
-    width: 49%; /*NEW*/
+    width: 49%;
   }
 }
 
-/*For screens above 1150px*/ /*NEW*/
+/*For screens above 1150px*/
 @media screen and (min-width:1150px) {
   .menu {
     width: 47%;
@@ -603,27 +596,27 @@ footer p a:active {
 
 /*For screens above 1200px*/
 @media screen and (min-width:1200px) {
-  header {
-    position: fixed;
-  }
-  .logo-icon{
-    margin-left: 15px;
-  }
-  .logo-text {
-    font-size: 1em;
-    letter-spacing: 1px;
-    margin-top: -7px;
-  }
-  .menu {
-    width: 50%;
-  }
-    .menu li {
-      width: auto;
-      margin: 0 0 0 40px;
-    }
   .photo-lane {
-    padding-bottom: 22%; /*NEW*/
+    padding-bottom: 22%;
   }
+    header {
+      position: fixed;
+    }
+      .logo-icon{
+        margin-left: 15px;
+      }
+      .logo-text {
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-top: -7px;
+      }
+      .menu {
+        width: 50%;
+      }
+        .menu li {
+          width: auto;
+          margin: 0 0 0 40px;
+        }
   .who-we-are h2 {
   padding-top: 30px;
   }
@@ -635,7 +628,7 @@ footer p a:active {
 /*For screens above 1250px*/
 @media screen and (min-width:1250px) {
   .menu {
-    width: 47%; /*NEW*/
+    width: 47%;
     margin-right: 15px;
   }
 }
@@ -643,49 +636,46 @@ footer p a:active {
 /*For screens above 1275px*/
 @media screen and (min-width:1275px) {
   .menu {
-    width: 46%; /*NEW*/
+    width: 46%;
   }
 }
 
-/*For screens above 1300px*/ /*NEW NEW Deleted 1300px*/
-
-
-/*For screens above 1350px*/ /*NEW*/
+/*For screens above 1350px*/
 @media screen and (min-width:1350px) {
   .menu {
-    width: 45%; /*NEW NEW*/
+    width: 45%;
   }
 }
 
-/*For screens above 1450px*/ /*NEW NEW*/
+/*For screens above 1450px*/
 @media screen and (min-width:1450px) {
   .menu {
     width: 41%;
   }
 }
 
-/*For screens above 1550px*/ /*NEW NEW*/
+/*For screens above 1550px*/
 @media screen and (min-width:1550px) {
   .menu {
     width: 38%;
   }
 }
 
-/*For screens above 1650px*/ /*NEW NEW*/
+/*For screens above 1650px*/
 @media screen and (min-width:1650px) {
   .menu {
     width: 36%;
   }
 }
 
-/*For screens above 1750px*/ /*NEW NEW*/
+/*For screens above 1750px*/
 @media screen and (min-width:1750px) {
   .menu {
     width: 34%;
   }
 }
 
-/*For screens above 1850px*/ /*NEW NEW*/
+/*For screens above 1850px*/
 @media screen and (min-width:1850px) {
   .menu {
     width: 32%;
@@ -695,6 +685,6 @@ footer p a:active {
 /*For screens above 1920px*/
 @media screen and (min-width:1920px) {
   .menu {
-    width: 31%; /*NEW*/
+    width: 31%;
   }
 }
