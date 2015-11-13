@@ -213,7 +213,7 @@ a {
 /* Address & Contact us */
 .address {
   margin: 10px 0;
-  padding: 5px;
+  padding: 0;
 }
 #contactus {
   padding: 0;
@@ -623,7 +623,7 @@ footer {
       .engineers a {
         border-top: 3px solid rgba(245,187,0,0);
       }
-    /*.address { NEW
+    .address {
       float: left;
       width: 50%;
     }
@@ -637,7 +637,7 @@ footer {
       width: 50%;
       padding-top: 37px;
       padding-left: 10px;
-    }*/
+    }
       /*.name {
         margin-top: 10px;
       }
@@ -769,9 +769,9 @@ footer {
   #googleMap {
     height: 278px;
   }
-  /*#contactus { NEW
+  #contactus {
     padding-top: 32px;
-  }*/
+  }
 }
 
 /*For screens above 1250px*/
