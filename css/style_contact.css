@@ -226,14 +226,12 @@ a {
     text-align: left;
   }
 #googleMap {
-  /*width: 310px;NEW*/
-  width: 99%; /*NEW*/
+  width: 99%;
   height: 266px;
   margin: 10px auto;
 }
 iframe {
-  /*width: 310px;NEW*/
-  width: 99%; /*NEW*/
+  width: 99%;
   padding: 0;
 }
 /*.name,
@@ -389,12 +387,6 @@ footer {
     .menu li {
       margin-top: 3px;
     }
-  #googleMap {
-    /*width: 365px;NEW*/
-  }
-  iframe {
-    /*width: 365px;NEW*/
-  }
   /*.message {
     width: 365px;
   }*/
@@ -412,11 +404,9 @@ footer {
       margin-top: 5px;
     }
   #googleMap {
-    /*width: 385px;NEW*/
     margin: 10px 5px;
   }
   iframe {
-    /*width: 99%;NEW*/
     margin: 5px auto;
   }
   .facebook {
