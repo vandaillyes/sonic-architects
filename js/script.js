@@ -132,19 +132,9 @@ function revealOther(event) {
 //under particular circumstances.
 //I inserted these 2 resize functions as a workaround.
 $( window ).resize(function() {
-if ( $(window).width() < 550 ) {
   $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
-  $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css({"color" : "#000",
-                                                                                                                                                      "background-color" : "#E3E3E5",
-                                                                                                                                                      "border" : "1px solid #9999A1",
-                                                                                                                                                      "border-bottom" : "3px solid #9999A1"});
-  }
 });
-$( window ).resize(function() {
-  if ( $(window).width() >= 550 ) {
-  $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
-  }
-});
+
 
 //For the ENGINEERS page
 function revealReadMore() {
