@@ -57,7 +57,7 @@ function revealService(event) {
   event.preventDefault();
   $(this).closest('.service').find('.service-description').slideToggle("slow");
 }
-//I found a bug that appeared on resizing the window: the decsription of the services was sometimes hidden
+//I found a bug that appeared on resizing the window: the description of the services was sometimes hidden
 //when it should've been displayed or was displayed when it should've been hidden. This bug only occurred
 //under particular circumstances.
 //I inserted these 2 resize functions as a workaround.
@@ -127,6 +127,16 @@ function revealOther(event) {
     $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a").css("color", "#000");
   }
 }
+//I found a bug that appeared on resizing the window: the list of equipment was sometimes hidden
+//when it should've been displayed or was displayed when it should've been hidden. This bug only occurred
+//under particular circumstances.
+//I inserted this resize function as a workaround.
+$( window ).resize(function() {
+if ( $(window).width() < 550 ) {
+  $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
+  $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css("color", "#000");
+  }
+});
 
 //For the ENGINEERS page
 function revealReadMore() {
@@ -137,7 +147,7 @@ function revealEngineer(event) {
   event.preventDefault();
   $(this).closest('.engineer-wrapper').find('.engineer-description').slideToggle("slow");
 }
-//I found a bug that appeared on resizing the window: the decsription of the engineers was sometimes hidden
+//I found a bug that appeared on resizing the window: the description of the engineers was sometimes hidden
 //when it should've been displayed or was displayed when it should've been hidden. This bug only occurred
 //under particular circumstances.
 //I inserted these 2 resize functions as a workaround.
