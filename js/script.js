@@ -127,19 +127,11 @@ function revealOther(event) {
     $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a").css("color", "#000");
   }
 }
-//I found a bug that appeared on resizing the window: the list of equipment was sometimes hidden
-//when it should've been displayed or was displayed when it should've been hidden. This bug only occurred
-//under particular circumstances.
-//I inserted these 2 resize functions as a workaround.
+//I found a bug that appeared on resizing the window: when going from a wide screen to a narrow one, some of the design of the wide screen carried over to the narrow one.
+//I wanted to get rid of that so I inserted this resize functions as a workaround.
 $( window ).resize(function() {
   if ( $(window).width() < 550 ) {
-  $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
   $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css("color", "#000");
-  }
-});
-$( window ).resize(function() {
-  if ( $(window).width() >= 550 ) {
-  $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
   }
 });
 
