@@ -128,10 +128,17 @@ function revealOther(event) {
   }
 }
 //I found a bug that appeared on resizing the window: when going from a wide screen to a narrow one, some of the design of the wide screen carried over to the narrow one.
-//I wanted to get rid of that so I inserted this resize functions as a workaround.
+//Also, there were bugs related to what is hidden and what is displayed on a window resize.
+//I inserted these resize functions as a workaround.
 $( window ).resize(function() {
   if ( $(window).width() < 550 ) {
-  $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css("color", "#000");
+    $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
+    $(".microphones-button > a, .outboard-button > a, .control-room-button > a, .instruments-button > a, .software-button > a, .other-button > a").css("color", "#000");
+  }
+});
+$( window ).resize(function() {
+  if ( $(window).width() >= 550 ) {
+    $(".microphones-list, .outboard-list, .control-room-list, .instruments-list, .software-list, .other-list").css("display", "none");
   }
 });
 
